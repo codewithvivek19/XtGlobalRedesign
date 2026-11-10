@@ -1,0 +1,151 @@
+/* =========================================================
+   MOTION + DEPTH LAYER  (studied from Aeline, rebuilt for XTGlobal)
+   ========================================================= */
+:root{
+  --ease-out:cubic-bezier(.16,1,.3,1);          /* expo-out, Framer default feel */
+  --ease-io:cubic-bezier(.65,0,.35,1);
+  --sh-1:0 1px 2px rgba(10,27,54,.06),0 2px 6px rgba(10,27,54,.05);
+  --sh-2:0 2px 4px rgba(10,27,54,.05),0 12px 24px -8px rgba(10,27,54,.14),0 24px 48px -24px rgba(10,27,54,.18);
+  --sh-3:0 4px 8px rgba(10,27,54,.06),0 24px 48px -16px rgba(10,27,54,.24),0 60px 90px -40px rgba(6,18,38,.35);
+}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+
+/* scroll progress */
+.progress{position:fixed;left:0;top:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--sky);z-index:120;pointer-events:none}
+
+/* ---------- floating nav: hides on scroll down, returns on scroll up ---------- */
+.nav{position:fixed;top:10px;left:10px;right:10px;z-index:85;border-radius:28px;transition:transform 600ms var(--ease-out),background 400ms,box-shadow 400ms,padding 400ms}
+.nav.hide{transform:translateY(-130%)}
+.nav.solid{background:rgba(255,255,255,.94);box-shadow:var(--sh-2);padding-top:10px;padding-bottom:10px;left:max(10px,calc(50% - 640px));right:max(10px,calc(50% - 640px));top:12px}
+.nav.solid .links{background:var(--cloud);border-color:var(--mist)}
+.nav.solid .links a{color:var(--navy)}
+.nav.solid .links a.fl{background:var(--navy);color:#fff}
+.nav.solid .ib{background:var(--cloud);border-color:var(--mist);color:var(--navy)}
+.nav.solid .brandpill{height:44px;background:transparent;padding:0 10px}
+.nav.solid .navr .b-sky{background:var(--navy);color:#fff}
+.nav.solid .navr .b-sky .ad{background:var(--sky);color:var(--midnight)}
+.shell .hero{padding-top:calc(clamp(20px,3.4vw,48px) + 88px)}
+.mnav{position:fixed;top:88px;left:10px;right:10px;z-index:84;background:#fff;border-radius:24px;box-shadow:var(--sh-3)}
+.mnav a{background:var(--cloud)!important;color:var(--navy)!important}
+
+/* ---------- hero: Ken Burns + scroll depth ---------- */
+.shell>img.ph{transform-origin:50% 0%;will-change:transform;scale:1.04}
+.js-motion .shell>img.ph{animation:kb 2.6s var(--ease-out) both}
+@keyframes kb{from{scale:1.14}to{scale:1.04}}
+.hero-inner{will-change:transform,opacity}
+
+/* ---------- 3D ring of cards (Aeline hero) ---------- */
+.ring{-webkit-user-select:none;user-select:none;position:relative;width:100%;height:330px;margin-top:clamp(32px,3.6vw,48px);perspective:2200px;perspective-origin:50% 20%;cursor:grab;touch-action:pan-y;outline:none}
+.ring:active{cursor:grabbing}
+.ring:focus-visible{outline:2px solid var(--sky);outline-offset:8px;border-radius:24px}
+.ring-rot{position:absolute;left:50%;top:0;width:0;height:100%;transform-style:preserve-3d}
+.rc{-webkit-user-drag:none;position:absolute;top:0;left:-120px;width:240px;height:300px;border-radius:22px;padding:18px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;isolation:isolate;background:#fff;color:var(--ink);box-shadow:var(--sh-3);backface-visibility:hidden;will-change:transform,opacity;font:inherit;border:0}
+.rc>.pat{position:absolute;inset:0;z-index:-1}
+.rc .mono{font-size:12.5px;color:var(--slate);display:inline-flex;align-self:flex-start;padding:5px 11px;border-radius:999px;background:color-mix(in srgb,currentColor 9%,transparent);font-weight:500}
+.rc .num{font-size:64px;font-weight:500;letter-spacing:-.06em;line-height:.9;font-variant-numeric:tabular-nums}
+.rc .num sup{font-size:.4em;color:var(--sky7);vertical-align:.9em;margin-left:2px}
+.rc .s{font-size:13px;line-height:1.4;color:var(--slate);margin-top:8px}
+.rc.dark{background:var(--n800);color:#fff;box-shadow:var(--sh-3),inset 0 1px 0 rgba(255,255,255,.08)}
+.rc.dark .mono{color:var(--slate3)}.rc.dark .s{color:var(--slate3)}.rc.dark .num sup{color:var(--sky)}
+.rc.mid{background:var(--midnight);color:#fff;width:300px;left:-150px;box-shadow:var(--sh-3),inset 0 1px 0 rgba(255,255,255,.08)}
+.rc.mid .mono{color:var(--slate3)}
+.rc.sky{background:var(--sky);color:var(--midnight)}.rc.sky .mono,.rc.sky .s{color:var(--navy)}
+.rc.sky .go{display:flex;justify-content:space-between;align-items:center;font-weight:500;font-size:15px}
+.rc.sky .go .ad{width:38px;height:38px;border-radius:50%;background:var(--midnight);color:var(--sky);display:grid;place-items:center;transition:transform 300ms var(--ease-out)}
+.rc.sky:hover .go .ad{transform:rotate(45deg)}
+.rc.cloud{background:var(--cloud)}
+.rc .ticks{list-style:none}
+.rc .ticks li{padding:9px 0;border-top:1px solid var(--mist);font-size:16px;font-weight:500;letter-spacing:-.02em;display:flex;justify-content:space-between;align-items:center}
+.rc .ticks li::after{content:"";width:9px;height:5px;border-left:1.6px solid var(--sky7);border-bottom:1.6px solid var(--sky7);transform:rotate(-45deg)}
+.rc.ask{background:var(--navy);color:#fff;cursor:pointer}
+.rc.ask .vx{width:56px;height:56px;color:#fff}
+.rc.ask .mono{color:var(--slate3)}
+.rc.ask .askq{font-size:22px;font-weight:500;letter-spacing:-.04em;line-height:1.15;display:block}
+.askbar2{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 5px 5px 14px;font-size:12.5px;color:#C3CDDC}
+.askbar2 i{width:30px;height:30px;border-radius:50%;background:var(--copper);color:var(--midnight);display:grid;place-items:center}
+.mq{display:grid;gap:0;background:#fff;border-radius:14px;padding:4px 10px;box-shadow:var(--sh-1)}
+.mq div{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-top:1px solid var(--mist);font-size:12.5px}
+.mq div:first-child{border-top:0}
+.mq b{font-size:11px;font-weight:500;border-radius:999px;padding:3px 8px;background:var(--navy);color:#fff}
+.mq b.p{background:var(--sky1);color:var(--sky7)}.mq b.c{background:var(--cloud);color:var(--slate)}
+.pm{display:grid;gap:6px}
+.pm span{border-radius:12px;padding:10px 12px;background:rgba(255,255,255,.07);font-size:14px;font-weight:500;border:1px solid rgba(255,255,255,.08)}
+.pm span.on{background:#fff;color:var(--navy)}
+@media(max-width:760px){
+  .ring{height:270px;perspective:1400px}
+  .rc{width:196px;left:-98px;height:250px;padding:15px}.rc.mid{width:240px;left:-120px}
+  .rc .num{font-size:52px}.rc.ask .askq{font-size:18px}
+}
+
+/* ---------- word reveal (blur rise, staggered) ---------- */
+.js-motion .w{display:inline-block;white-space:pre}
+.js-motion .w>i{display:inline-block;font-style:normal;opacity:0;transform:translateY(12px);filter:blur(10px);transition:opacity 900ms var(--ease-out),transform 900ms var(--ease-out),filter 900ms var(--ease-out);transition-delay:calc(var(--i,0) * 55ms + var(--d,0ms))}
+.js-motion .in .w>i,.js-motion .w.in>i{opacity:1;transform:none;filter:blur(0)}
+.js-motion .ico{transform:scale(.5);opacity:0;transition:transform 900ms cubic-bezier(.34,1.56,.64,1),opacity 500ms;transition-delay:calc(var(--i,0) * 55ms + 120ms)}
+.js-motion .in .ico{transform:none;opacity:1}
+.ico svg{animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- block reveals ---------- */
+.js-motion [data-a]{opacity:0;transition:opacity 900ms var(--ease-out),transform 1000ms var(--ease-out),filter 900ms var(--ease-out);transition-delay:var(--d,0ms)}
+.js-motion [data-a="up"]{transform:translateY(40px)}
+.js-motion [data-a="left"]{transform:translateX(var(--x,50px))}
+.js-motion [data-a="tilt"]{transform:perspective(1200px) translateY(60px) rotateX(14deg);transform-origin:50% 100%}
+.js-motion [data-a="scale"]{transform:scale(.94)}
+.js-motion [data-a="blur"]{filter:blur(12px);transform:translateY(16px)}
+.js-motion [data-a].in{opacity:1;transform:none;filter:none}
+/* legacy .rv now driven by the same engine */
+.js-motion .rv{opacity:1;transform:none}
+
+/* ---------- dark panels expand into place as they scroll in ---------- */
+.clipx{will-change:clip-path}
+
+/* ---------- hover depth ---------- */
+.tilt{transform-style:preserve-3d;transition:transform 500ms var(--ease-out),box-shadow 500ms var(--ease-out)}
+.tilt.hovering{transition:transform 120ms linear,box-shadow 400ms var(--ease-out);box-shadow:var(--sh-3)}
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.14),transparent 45%);opacity:0;transition:opacity 400ms;z-index:3}
+.tilt.hovering::after{opacity:1}
+.sv,.ic2,.iv,.bc,.post .th,.df,.ct,.hw{position:relative}
+
+/* ---------- button label roll ---------- */
+.roll{display:inline-grid;overflow:hidden;line-height:1.25;height:1.25em}
+.roll>span{grid-area:1/1;transition:transform 500ms var(--ease-out)}
+.roll>span+span{transform:translateY(105%)}
+.btn:hover .roll>span:first-child,.lcard:hover .roll>span:first-child{transform:translateY(-105%)}
+.btn:hover .roll>span+span,.lcard:hover .roll>span+span{transform:none}
+.mag{transition:transform 600ms var(--ease-out)}
+
+/* ---------- floating layers inside industry stages ---------- */
+.stage .ui,.stage .float,.stage .pipe{will-change:transform}
+.float{animation:bob 6s ease-in-out infinite}
+.float:nth-of-type(2){animation-delay:-2s}
+@keyframes bob{50%{translate:0 -8px}}
+.stage>img.ph,.rbig>img.ph,.cta>img.ph,.bc.photo>img.ph,.gcc>img.ph{will-change:transform;scale:1.16}
+
+/* ---------- results autoplay progress ---------- */
+.ri{position:relative;overflow:hidden}
+.ri .bar{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--sky);transform-origin:0 50%;transform:scaleX(0)}
+.ri[aria-current="true"] .bar{animation:fillx var(--dur,6s) linear forwards}
+.rs.paused .ri .bar{animation-play-state:paused}
+@keyframes fillx{to{transform:scaleX(1)}}
+.rbig>.ph{animation:kb2 7s ease-out both}
+@keyframes kb2{from{scale:1.26}to{scale:1.16}}
+
+/* ---------- film grain on dark surfaces (depth) ---------- */
+.grain::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.gcc>.wrap,.cta>.ctag,.foot>.fg,.foot>.fb{position:relative;z-index:1}
+
+/* ---------- richer surfaces ---------- */
+.sv{box-shadow:var(--sh-1)}
+.ic2 .ui{box-shadow:var(--sh-3)}
+.iv.ft,.rbig,.g-ask,.bc.dk,.bc.photo,.sv.flag,.cbox{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),var(--sh-2)}
+.cbox.out{box-shadow:var(--sh-3)}
+.marq .mtrack{animation:none}
+
+@media(max-width:600px){.dock{width:auto;padding:6px 14px 6px 6px;border-radius:999px;display:flex;align-items:center;gap:8px}.dock .top p,.dock .x{display:none}.dock .vx{width:36px;height:36px}.dock button.go{margin:0;width:auto;height:36px;padding:0 14px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){
+  .js-motion [data-a],.js-motion .w>i,.js-motion .ico{opacity:1!important;transform:none!important;filter:none!important}
+  .float,.ico svg,.shell>img.ph{animation:none!important}
+}
