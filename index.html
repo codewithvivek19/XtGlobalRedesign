@@ -11,10 +11,10 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%233CCBFF%27/%3E%3Cstop offset=%271%27 stop-color=%27%236461FF%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%2304060D%27/%3E%3Cpath d=%27M11 6l13 10-13 10 4-10z%27 fill=%27url(%23g)%27/%3E%3C/svg%3E">
 <style>
 :root{
-  --midnight:#061226;--navy:#0A1B36;--n800:#10284D;--n700:#1A3A6B;--n600:#2A4E85;
-  --sky:#4BBFEA;--sky3:#8AD6F7;--sky1:#D6F0FB;--sky7:#0A5E9E;
-  --cloud:#F3F4F6;--mist:#E4E7EC;--slate:#5A6A84;--slate3:#A9B4C6;--white:#fff;--copper:#C96A1B;
-  --ink:#0A1B36;--ink2:#5A6A84;--line:rgba(10,27,54,.1);
+  --midnight:#0B0922;--navy:#120F33;--n800:#1E1A5C;--n700:#2A2470;--n600:#3B34A0;
+  --sky:#6E4BFF;--sky3:#B7A6FF;--sky1:#ECE8FF;--sky7:#5B3DF5;
+  --cloud:#F4F2FA;--mist:#E2DFEE;--slate:#5B5A7A;--slate3:#A7A3C4;--white:#fff;--copper:#FF7A3D;
+  --ink:#120F33;--ink2:#5B5A7A;--line:rgba(18,15,51,.1);
   --f:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--m:var(--f);
   --e:cubic-bezier(.2,.7,.2,1);--t:260ms;--wrap:1200px;--g:clamp(20px,4vw,40px);
 }
@@ -59,13 +59,13 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px clamp(16px,3vw,32px)}
 .brandpill{display:flex;align-items:center;background:#fff;border-radius:999px;height:52px;padding:0 22px}
 .brandpill img{height:28px;width:auto}
-.links{display:flex;gap:2px;background:rgba(6,18,38,.55);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px}
-.links a{padding:9px 16px;border-radius:999px;font-size:14.5px;color:#D4DCE8;white-space:nowrap;transition:background var(--t),color var(--t)}
+.links{display:flex;gap:2px;background:rgba(11,9,34,.55);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px}
+.links a{padding:9px 16px;border-radius:999px;font-size:14.5px;color:#D4CFEA;white-space:nowrap;transition:background var(--t),color var(--t)}
 .links a:hover{background:rgba(255,255,255,.1);color:#fff}
 .links a.fl{background:var(--sky);color:var(--midnight);font-weight:500}
 .navr{display:flex;gap:8px;align-items:center}
 .navr .btn{height:48px;font-size:13px}.navr .btn .ad{width:34px;height:34px}
-.ib{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:rgba(6,18,38,.55);border:1px solid rgba(255,255,255,.14);color:#fff}
+.ib{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:rgba(11,9,34,.55);border:1px solid rgba(255,255,255,.14);color:#fff}
 .ib:hover{border-color:var(--copper)}
 .burger{display:none}
 @media(max-width:1180px){.links,.navr .b-sky{display:none}.burger{display:grid}}
@@ -73,14 +73,14 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 .mnav a{background:rgba(255,255,255,.07);border-radius:16px;padding:16px 20px;font-size:20px;letter-spacing:-.03em;display:flex;justify-content:space-between}
 
 .hero{text-align:center;padding:clamp(48px,7vw,96px) var(--g) clamp(28px,4vw,52px);display:flex;flex-direction:column;align-items:center}
-.chip{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.16);background:rgba(6,18,38,.6);border-radius:999px;padding:7px 16px 7px 8px;font-size:14px;color:#D4DCE8}
+.chip{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.16);background:rgba(11,9,34,.6);border-radius:999px;padding:7px 16px 7px 8px;font-size:14px;color:#D4CFEA}
 .chip b{background:var(--sky);color:var(--midnight);border-radius:999px;padding:3px 10px;font-family:var(--m);font-size:12.5px;font-weight:500;letter-spacing:-.005em}
 .chip .cs{display:none}@media(max-width:520px){.chip .cl{display:none}.chip .cs{display:inline}}
 .hero h1{margin-top:26px;max-width:12ch}
 .hero h1 .hl{color:var(--sky3)}
-.shell:has(>img.ph) .hero h1,.shell:has(>img.ph) .hero p.lede{text-shadow:0 2px 28px rgba(6,18,38,.55),0 1px 2px rgba(6,18,38,.35)}
+.shell:has(>img.ph) .hero h1,.shell:has(>img.ph) .hero p.lede{text-shadow:0 2px 28px rgba(11,9,34,.55),0 1px 2px rgba(11,9,34,.35)}
 .shell:has(>img.ph) .hero p.lede{color:#fff}
-.hero p.lede{color:#C3CDDC;margin:24px auto 34px;text-align:center}
+.hero p.lede{color:#C2BCE6;margin:24px auto 34px;text-align:center}
 .hero .ctas{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 
 /* hero card fan */
@@ -104,7 +104,7 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 @keyframes pulse{50%{opacity:.25}}
 .clk{display:grid;gap:0}
 .clk div{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(255,255,255,.12);padding:9px 0}
-.clk span{font-size:14px;color:#C3CDDC}.clk b{font-size:24px;font-weight:500;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.clk span{font-size:14px;color:#C2BCE6}.clk b{font-size:24px;font-weight:500;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 .clk i{font-style:normal;font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;color:var(--sky3);margin-left:8px}
 .clk i.off{color:var(--slate3)}
 .fc.sky .go{display:flex;justify-content:space-between;align-items:center;font-weight:500;font-size:15px;position:relative}
@@ -135,7 +135,7 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 .askbar input::placeholder{color:var(--slate3)}
 .askbar button{height:44px;padding:0 20px;border-radius:999px;background:var(--copper);color:var(--midnight);font-family:var(--m);font-size:12.5px;font-weight:500;letter-spacing:-.005em}
 .sugg{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.sugg button{font-size:13.5px;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 13px;color:#D4DCE8;transition:border-color var(--t)}
+.sugg button{font-size:13.5px;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 13px;color:#D4CFEA;transition:border-color var(--t)}
 .sugg button:hover{border-color:var(--copper)}
 .disc{font-size:12.5px;color:var(--slate3);margin-top:16px}
 .g-here{background:var(--cloud)}
@@ -165,7 +165,7 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 .bc.photo{grid-row:span 2;background:var(--navy);color:#fff;justify-content:flex-end;min-height:520px}
 .bc.photo .over{background:#fff;color:var(--ink);border-radius:18px;padding:18px}
 .bc.photo .over .n{font-size:64px}
-.bc.photo .slot{position:absolute;top:18px;left:18px;font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;color:var(--sky3);background:rgba(6,18,38,.6);border-radius:999px;padding:5px 10px}
+.bc.photo .slot{position:absolute;top:18px;left:18px;font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;color:var(--sky3);background:rgba(11,9,34,.6);border-radius:999px;padding:5px 10px}
 .bc.cl{background:var(--cloud)}
 .bc.sk{background:var(--sky)}.bc.sk .mono,.bc.sk p{color:var(--navy)}.bc.sk .n sup{color:var(--navy)}
 .bc.dk{background:var(--navy);color:#fff}.bc.dk .mono,.bc.dk p{color:var(--slate3)}.bc.dk .n sup{color:var(--sky)}
@@ -189,7 +189,7 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 /* ===== SERVICES TRAY ===== */
 .tray{background:var(--cloud);border-radius:32px;padding:10px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .sv{background:#fff;border-radius:24px;padding:24px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;position:relative;overflow:hidden;isolation:isolate;transition:transform 300ms var(--e),box-shadow 300ms var(--e)}
-.sv:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(10,27,54,.35)}
+.sv:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(18,15,51,.35)}
 .sv .row{display:flex;justify-content:space-between;align-items:center}
 .sv .ic{width:52px;height:52px;border-radius:14px;background:var(--sky);color:var(--midnight);display:grid;place-items:center}
 .sv .go{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:all var(--t) var(--e)}
@@ -202,7 +202,7 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 .sv .badge{font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;background:var(--sky);color:var(--midnight);border-radius:999px;padding:4px 10px}
 .sv .sub{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
 .sv .sub span{font-size:12.5px;background:var(--cloud);border-radius:999px;padding:4px 10px;color:var(--ink2)}
-.sv.flag .sub span{background:rgba(255,255,255,.08);color:#C3CDDC}
+.sv.flag .sub span{background:rgba(255,255,255,.08);color:#C2BCE6}
 @media(max-width:960px){.tray{grid-template-columns:1fr 1fr}}@media(max-width:600px){.tray{grid-template-columns:1fr}.sv{min-height:0}}
 
 /* ===== INDUSTRIES (Aeline expertise 2x2 with live UI) ===== */
@@ -214,7 +214,7 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 .stage>.pat{z-index:-1}
 .ic2 .txt{padding:22px 20px 16px;text-align:center}
 .ic2 .txt p{font-size:14.5px;color:var(--ink2);margin:8px auto 0;max-width:44ch}
-.ui{background:#fff;border-radius:16px;box-shadow:0 20px 40px -20px rgba(10,27,54,.35);padding:14px;font-size:12.5px;width:min(320px,82%)}
+.ui{background:#fff;border-radius:16px;box-shadow:0 20px 40px -20px rgba(18,15,51,.35);padding:14px;font-size:12.5px;width:min(320px,82%)}
 .ui .uh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .ui .uh b{font-weight:600;font-size:13.5px;letter-spacing:-.02em}
 .ui .k{font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;color:var(--slate)}
@@ -226,11 +226,11 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 .ui .bars i.h{background:var(--navy)}
 .ui .big{font-size:34px;font-weight:500;letter-spacing:-.05em;line-height:1}
 .ui.dk{background:var(--midnight);color:#fff}.ui.dk .r{border-color:rgba(255,255,255,.1)}.ui.dk .r em,.ui.dk .k{color:var(--slate3)}
-.float{position:absolute;background:#fff;border-radius:999px;padding:7px 12px 7px 8px;display:flex;gap:8px;align-items:center;font-size:12.5px;box-shadow:0 12px 24px -12px rgba(10,27,54,.4);font-weight:500}
+.float{position:absolute;background:#fff;border-radius:999px;padding:7px 12px 7px 8px;display:flex;gap:8px;align-items:center;font-size:12.5px;box-shadow:0 12px 24px -12px rgba(18,15,51,.4);font-weight:500}
 .float i{width:20px;height:20px;border-radius:50%;background:var(--sky);display:grid;place-items:center}
 .float i::after{content:"";width:7px;height:4px;border-left:1.5px solid var(--midnight);border-bottom:1.5px solid var(--midnight);transform:rotate(-45deg) translate(1px,-1px)}
 .pipe{display:flex;align-items:center;gap:6px;justify-content:center;flex-wrap:wrap}
-.pipe span{background:#fff;border-radius:999px;padding:9px 14px;font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;box-shadow:0 10px 20px -14px rgba(10,27,54,.5)}
+.pipe span{background:#fff;border-radius:999px;padding:9px 14px;font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;box-shadow:0 10px 20px -14px rgba(18,15,51,.5)}
 .pipe span.on{background:var(--sky);color:var(--midnight)}
 .pipe i{width:16px;height:1.5px;background:var(--sky)}
 @media(max-width:860px){.ind{grid-template-columns:1fr}}
@@ -238,7 +238,7 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 /* ===== GCC (dark shell) ===== */
 .gcc{margin:10px;border-radius:28px;background:var(--midnight);color:#fff;position:relative;overflow:hidden;isolation:isolate}
 .gcc>.pat{z-index:-1}
-.gcc .shead .lede{color:#C3CDDC}
+.gcc .shead .lede{color:#C2BCE6}
 .gcc .tag{color:var(--sky3)}
 .pods{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .pod{text-align:left;border-radius:22px;padding:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:28px;transition:all var(--t)}
@@ -258,16 +258,16 @@ h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.035em;line-height:1.2}
 .fl2 output{color:#fff;font-size:13px}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:none;cursor:pointer}
 input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:linear-gradient(90deg,var(--sky) var(--p,30%),rgba(255,255,255,.18) var(--p,30%))}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;margin-top:-10px;box-shadow:0 0 0 6px rgba(75,191,234,.3)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;margin-top:-10px;box-shadow:0 0 0 6px rgba(110,75,255,.3)}
 input[type=range]::-moz-range-track{height:4px;border-radius:4px;background:rgba(255,255,255,.18)}
 input[type=range]::-moz-range-progress{height:4px;border-radius:4px;background:var(--sky)}
 input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:0}
 .lt input[type=range]::-webkit-slider-runnable-track{background:linear-gradient(90deg,var(--navy) var(--p,30%),var(--mist) var(--p,30%))}
-.lt input[type=range]::-webkit-slider-thumb{background:var(--navy);box-shadow:0 0 0 6px rgba(10,27,54,.12)}
+.lt input[type=range]::-webkit-slider-thumb{background:var(--navy);box-shadow:0 0 0 6px rgba(18,15,51,.12)}
 .seg2{display:flex;gap:6px;flex-wrap:wrap}
 .seg2 button{height:42px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.16);font-size:14px;transition:all var(--t)}
 .seg2 button[aria-pressed="true"]{background:var(--sky);color:var(--midnight);border-color:var(--sky)}
-.ctl{font-size:14.5px;color:#C3CDDC}
+.ctl{font-size:14.5px;color:#C2BCE6}
 .otop{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
 .wk{font-size:clamp(76px,9vw,120px);font-weight:500;letter-spacing:-.07em;line-height:.8;font-variant-numeric:tabular-nums}
 .wk small{font-size:14px;letter-spacing:0;color:var(--slate);margin-left:10px;font-family:var(--m);vertical-align:.2em}
@@ -297,7 +297,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .sublock{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:6px 14px 6px 6px}
 .sublock b{background:var(--navy);color:#fff;border-radius:999px;padding:4px 12px;font-weight:600;letter-spacing:-.02em}
 .sublock span{font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;color:var(--slate)}
-.queue{background:#fff;border-radius:18px;padding:14px;box-shadow:0 20px 40px -26px rgba(10,27,54,.4)}
+.queue{background:#fff;border-radius:18px;padding:14px;box-shadow:0 20px 40px -26px rgba(18,15,51,.4)}
 .queue .r{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:10px 4px;border-top:1px solid var(--mist);font-size:13.5px}
 .queue .r:first-of-type{border-top:0}
 .queue .st{font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;border-radius:999px;padding:3px 9px;background:var(--cloud)}
@@ -408,7 +408,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .cta>.pat{z-index:-1}
 .ctag{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
 .cta h2{font-size:clamp(38px,5.4vw,72px);max-width:12ch}
-.cta .lede{color:#C3CDDC;margin:22px 0 30px}
+.cta .lede{color:#C2BCE6;margin:22px 0 30px}
 .dir{display:grid;gap:4px;font-size:clamp(20px,2vw,26px);letter-spacing:-.04em;margin-top:28px}
 .dir a:hover{color:var(--sky3)}
 .offs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:26px}
@@ -432,11 +432,11 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 @media(max-width:900px){.ctag{grid-template-columns:1fr}.offs{grid-template-columns:1fr}.f2{grid-template-columns:1fr}}
 
 /* ===== FOOTER (Aeline dark rounded) ===== */
-.foot{margin:10px;border-radius:28px;background:var(--midnight);color:#C3CDDC;padding:clamp(32px,4vw,56px);position:relative;overflow:hidden;isolation:isolate}
+.foot{margin:10px;border-radius:28px;background:var(--midnight);color:#C2BCE6;padding:clamp(32px,4vw,56px);position:relative;overflow:hidden;isolation:isolate}
 .foot>.pat{z-index:-1;opacity:.5}
 .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:28px}
 .foot h4{font-family:var(--m);font-size:12.5px;font-weight:500;letter-spacing:-.005em;color:var(--slate3);margin-bottom:14px}
-.foot a{display:block;padding:4px 0;font-size:14.5px;color:#E2E8F0}.foot a:hover{color:var(--sky3)}
+.foot a{display:block;padding:4px 0;font-size:14.5px;color:#E6E2F4}.foot a:hover{color:var(--sky3)}
 .fbrand .brandpill{display:inline-flex;margin-bottom:18px;height:auto;padding:14px 24px;border-radius:20px}
 .news{display:flex;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px 5px 5px 18px;margin-top:18px;max-width:380px}
 .news input{flex:1;background:none;border:0;outline:0;color:#fff;min-width:0}
@@ -461,7 +461,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 @keyframes speak{50%{transform:scale(1.14)}}
 
 /* ===== ASSISTANT PANEL ===== */
-.scrim{position:fixed;inset:0;background:rgba(6,18,38,.45);opacity:0;pointer-events:none;transition:opacity var(--t);z-index:90}
+.scrim{position:fixed;inset:0;background:rgba(11,9,34,.45);opacity:0;pointer-events:none;transition:opacity var(--t);z-index:90}
 .scrim.open{opacity:1;pointer-events:auto}
 .asst{position:fixed;top:10px;right:10px;bottom:10px;width:min(440px,calc(100% - 20px));background:var(--midnight);color:#fff;z-index:100;border-radius:24px;transform:translateX(110%);transition:transform 320ms var(--e);display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
 .asst.open{transform:none}
@@ -470,7 +470,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .ah b{font-weight:500;font-size:17px;letter-spacing:-.03em;display:block}
 .ah small{font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;color:var(--slate3)}
 .ah .ib{margin-left:auto;width:40px;height:40px}
-.aiflag{margin:0 14px;background:rgba(201,106,27,.14);border:1px solid rgba(201,106,27,.45);border-radius:14px;padding:10px 14px;font-size:12.5px;color:#F3D8C2}
+.aiflag{margin:0 14px;background:rgba(255,122,61,.14);border:1px solid rgba(255,122,61,.45);border-radius:14px;padding:10px 14px;font-size:12.5px;color:#F3D8C2}
 .log{flex:1;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:14px}
 .msg{max-width:92%;font-size:15px;line-height:1.5}
 .msg.u{align-self:flex-end;background:var(--n700);border-radius:18px 18px 6px 18px;padding:10px 16px}
@@ -482,14 +482,14 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .cite:hover{background:rgba(255,255,255,.14)}
 .skel{display:grid;gap:8px;width:80%}.skel i{height:10px;border-radius:6px;background:rgba(255,255,255,.12);animation:pulse 1s ease-in-out infinite}
 .skel i:nth-child(2){width:84%}.skel i:nth-child(3){width:58%}
-.human{margin:0 14px 10px;display:flex;justify-content:space-between;align-items:center;gap:12px;background:rgba(255,255,255,.05);border-radius:16px;padding:12px 14px;font-size:13px;color:#C3CDDC}
+.human{margin:0 14px 10px;display:flex;justify-content:space-between;align-items:center;gap:12px;background:rgba(255,255,255,.05);border-radius:16px;padding:12px 14px;font-size:13px;color:#C2BCE6}
 .human button{color:var(--sky3);font-weight:500;white-space:nowrap}
 .af{padding:0 14px 14px}
 .af form{display:flex;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 5px 5px 18px}
 .af form:focus-within{border-color:var(--copper)}
 .af input{flex:1;background:none;border:0;outline:0;min-width:0;color:#fff}
 .af button{width:42px;height:42px;border-radius:50%;background:var(--copper);color:var(--midnight);display:grid;place-items:center}
-.dock{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--midnight);color:#fff;border-radius:22px;padding:12px;width:270px;box-shadow:0 24px 48px -20px rgba(6,18,38,.6);border:1px solid rgba(255,255,255,.1);transform:translateY(140%);transition:transform 400ms var(--e)}
+.dock{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--midnight);color:#fff;border-radius:22px;padding:12px;width:270px;box-shadow:0 24px 48px -20px rgba(11,9,34,.6);border:1px solid rgba(255,255,255,.1);transform:translateY(140%);transition:transform 400ms var(--e)}
 .dock.show{transform:none}
 .dock .top{display:flex;gap:10px;align-items:center}
 .dock .vx{width:40px;height:40px;color:#fff;flex:none}
@@ -508,14 +508,14 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .shade{position:absolute;inset:0;z-index:-2;pointer-events:none}
 :has(>img.ph)>.pat{opacity:0}
 .gcc:has(>img.ph)>.pat{opacity:.55}
-.shell .shade{background:radial-gradient(48% 34% at 50% 41%,rgba(6,18,38,.8),rgba(6,18,38,.4) 58%,rgba(6,18,38,0) 88%),linear-gradient(180deg,rgba(6,18,38,.55) 0%,rgba(10,27,54,.28) 24%,rgba(10,27,54,.42) 50%,rgba(10,27,54,.86) 72%,rgba(10,27,54,1) 92%)}
+.shell .shade{background:radial-gradient(48% 34% at 50% 41%,rgba(11,9,34,.8),rgba(11,9,34,.4) 58%,rgba(11,9,34,0) 88%),linear-gradient(180deg,rgba(11,9,34,.55) 0%,rgba(18,15,51,.28) 24%,rgba(18,15,51,.42) 50%,rgba(18,15,51,.86) 72%,rgba(18,15,51,1) 92%)}
 .shell>img.ph{object-position:50% 30%}
 .shell:has(>img.ph)>.pat{opacity:0}
-.bc.photo .shade{background:linear-gradient(180deg,rgba(10,27,54,0) 35%,rgba(10,27,54,.7))}
-.stage .shade{background:rgba(10,27,54,.42)}
-.gcc>.ph{opacity:.34}.gcc .shade{background:radial-gradient(120% 80% at 50% 0%,rgba(6,18,38,.55),rgba(6,18,38,.96) 70%)}
-.cta .shade{background:linear-gradient(90deg,rgba(10,27,54,.96) 0%,rgba(10,27,54,.82) 50%,rgba(10,27,54,.55))}
-.rbig .shade{background:linear-gradient(180deg,rgba(10,27,54,.72),rgba(10,27,54,.95))}
+.bc.photo .shade{background:linear-gradient(180deg,rgba(18,15,51,0) 35%,rgba(18,15,51,.7))}
+.stage .shade{background:rgba(18,15,51,.42)}
+.gcc>.ph{opacity:.34}.gcc .shade{background:radial-gradient(120% 80% at 50% 0%,rgba(11,9,34,.55),rgba(11,9,34,.96) 70%)}
+.cta .shade{background:linear-gradient(90deg,rgba(18,15,51,.96) 0%,rgba(18,15,51,.82) 50%,rgba(18,15,51,.55))}
+.rbig .shade{background:linear-gradient(180deg,rgba(18,15,51,.72),rgba(18,15,51,.95))}
 .post .th>.ph{z-index:0}.post .th .lbl{z-index:2}
 
 /* ===== DAYLIGHT HERO (Aeline-style open sky) ===== */
@@ -523,26 +523,26 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .shell.day>img.ph{object-position:50% 0%;-webkit-mask-image:radial-gradient(56% 70% at 50% 36%,transparent 0%,transparent 40%,rgba(0,0,0,.35) 58%,rgba(0,0,0,.75) 76%,#000 94%);mask-image:radial-gradient(56% 70% at 50% 36%,transparent 0%,transparent 40%,rgba(0,0,0,.35) 58%,rgba(0,0,0,.75) 76%,#000 94%)}
 .shell.day{min-height:auto}
 @media(max-width:700px){.shell.day>img.ph{-webkit-mask-image:linear-gradient(180deg,transparent 0%,transparent 45%,rgba(0,0,0,.6) 65%,#000 85%);mask-image:linear-gradient(180deg,transparent 0%,transparent 45%,rgba(0,0,0,.6) 65%,#000 85%);object-position:50% 100%}}
-.shell.day .shade{background:linear-gradient(180deg,rgba(255,255,255,0) 55%,rgba(10,27,54,.35) 80%,rgba(10,27,54,.7) 100%)}
+.shell.day .shade{background:linear-gradient(180deg,rgba(255,255,255,0) 55%,rgba(18,15,51,.35) 80%,rgba(18,15,51,.7) 100%)}
 .shell.day>.pat{opacity:0}
 .day-nav .links{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.9)}
 .day-nav .links a{color:var(--navy)}
-.day-nav .links a:hover{background:rgba(10,27,54,.06);color:var(--navy)}
+.day-nav .links a:hover{background:rgba(18,15,51,.06);color:var(--navy)}
 .day-nav .links a.fl{background:var(--navy);color:#fff}
 .day-nav .ib{background:rgba(255,255,255,.85);border-color:#fff;color:var(--navy)}
 .day-nav .ib .vx{color:var(--navy)}
-.shell.day .chip{background:#fff;border-color:#fff;color:var(--navy);box-shadow:0 8px 24px -14px rgba(10,27,54,.4)}
+.shell.day .chip{background:#fff;border-color:#fff;color:var(--navy);box-shadow:0 8px 24px -14px rgba(18,15,51,.4)}
 .shell.day .chip b{background:var(--navy);color:#fff}
 .shell.day:has(>img.ph) .hero h1,.shell.day .hero h1{color:var(--navy);text-shadow:0 1px 0 rgba(255,255,255,.35)}
-.shell.day .hero h1 .hl{color:#1E7FB8}
-.shell.day:has(>img.ph) .hero p.lede,.shell.day .hero p.lede{color:#13233D;text-shadow:none;font-weight:500}
-.shell.day .b-navy{background:#fff;color:var(--navy);box-shadow:0 10px 24px -16px rgba(10,27,54,.5)}
+.shell.day .hero h1 .hl{color:#5B3DF5}
+.shell.day:has(>img.ph) .hero p.lede,.shell.day .hero p.lede{color:#17142F;text-shadow:none;font-weight:500}
+.shell.day .b-navy{background:#fff;color:var(--navy);box-shadow:0 10px 24px -16px rgba(18,15,51,.5)}
 .shell.day .b-navy:hover{background:var(--cloud)}
 .shell.day .hero .b-sky,.day-nav .navr .b-sky{background:var(--navy);color:#fff}
 .shell.day .hero .b-sky .ad,.day-nav .navr .b-sky .ad{background:var(--sky);color:var(--midnight)}
 .shell.day .hero .b-sky:hover,.day-nav .navr .b-sky:hover{background:var(--n700)}
 .day-nav .mnav a{background:rgba(255,255,255,.8);color:var(--navy)}
-.shell.day .fc{box-shadow:0 40px 70px -30px rgba(6,18,38,.55)}
+.shell.day .fc{box-shadow:0 40px 70px -30px rgba(11,9,34,.55)}
 /* reveal */
 .rv{opacity:0;transform:translateY(16px);transition:opacity 500ms var(--e),transform 500ms var(--e)}
 .rv.in{opacity:1;transform:none}
@@ -553,9 +553,9 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 :root{
   --ease-out:cubic-bezier(.16,1,.3,1);          /* expo-out, Framer default feel */
   --ease-io:cubic-bezier(.65,0,.35,1);
-  --sh-1:0 1px 2px rgba(10,27,54,.06),0 2px 6px rgba(10,27,54,.05);
-  --sh-2:0 2px 4px rgba(10,27,54,.05),0 12px 24px -8px rgba(10,27,54,.14),0 24px 48px -24px rgba(10,27,54,.18);
-  --sh-3:0 4px 8px rgba(10,27,54,.06),0 24px 48px -16px rgba(10,27,54,.24),0 60px 90px -40px rgba(6,18,38,.35);
+  --sh-1:0 1px 2px rgba(18,15,51,.06),0 2px 6px rgba(18,15,51,.05);
+  --sh-2:0 2px 4px rgba(18,15,51,.05),0 12px 24px -8px rgba(18,15,51,.14),0 24px 48px -24px rgba(18,15,51,.18);
+  --sh-3:0 4px 8px rgba(18,15,51,.06),0 24px 48px -16px rgba(18,15,51,.24),0 60px 90px -40px rgba(11,9,34,.35);
 }
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
@@ -612,7 +612,7 @@ html.lenis,html.lenis body{height:auto}
 .rc.ask .vx{width:56px;height:56px;color:#fff}
 .rc.ask .mono{color:var(--slate3)}
 .rc.ask .askq{font-size:22px;font-weight:500;letter-spacing:-.04em;line-height:1.15;display:block}
-.askbar2{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 5px 5px 14px;font-size:12.5px;color:#C3CDDC}
+.askbar2{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 5px 5px 14px;font-size:12.5px;color:#C2BCE6}
 .askbar2 i{width:30px;height:30px;border-radius:50%;background:var(--copper);color:var(--midnight);display:grid;place-items:center}
 .mq{display:grid;gap:0;background:#fff;border-radius:14px;padding:4px 10px;box-shadow:var(--sh-1)}
 .mq div{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-top:1px solid var(--mist);font-size:12.5px}
@@ -740,10 +740,10 @@ html.lenis,html.lenis body{height:auto}
     <span class="floor" aria-hidden="true"></span>
     <div class="ring" id="ring" tabindex="0" role="region" aria-roledescription="carousel" aria-label="XTGlobal at a glance. Drag or use the arrow keys to turn.">
       <div class="ring-rot" id="ringRot">
-        <article class="rc dark"><div class="pat" data-pat="bars" data-o='{"w":480,"h":600,"rows":9,"n":16,"c":"#1A3A6B"}'></div><p class="mono">Programs delivered</p><div><p class="num"><span data-count="200">200</span><sup>+</sup></p><p class="s">Across automation, cloud and managed operations</p></div></article>
+        <article class="rc dark"><div class="pat" data-pat="bars" data-o='{"w":480,"h":600,"rows":9,"n":16,"c":"#2A2470"}'></div><p class="mono">Programs delivered</p><div><p class="num"><span data-count="200">200</span><sup>+</sup></p><p class="s">Across automation, cloud and managed operations</p></div></article>
         <article class="rc"><p class="mono">Qualified professionals</p><div><p class="num"><span data-count="700">700</span><sup>+</sup></p><p class="s">Engineers, analysts and run teams across three campuses</p></div></article>
         <article class="rc mid"><div class="dm"><p class="mono">Delivery band</p><span class="live">Live</span></div><div class="clk" id="clk"></div></article>
-        <a class="rc sky" href="#gcc"><div class="pat" data-pat="field" data-o='{"w":480,"h":600,"cols":9,"rows":11,"c":"#0A1B36"}' style="opacity:.14"></div><p class="mono">Flagship, GCC-as-a-Service</p><div><p class="num">6–8</p><p class="s" style="margin:6px 0 14px">weeks to a running capability center</p><p class="go">Configure a Pod <span class="ad"><svg class="ar"><use href="#ar"/></svg></span></p></div></a>
+        <a class="rc sky" href="#gcc"><div class="pat" data-pat="field" data-o='{"w":480,"h":600,"cols":9,"rows":11,"c":"#120F33"}' style="opacity:.14"></div><p class="mono">Flagship, GCC-as-a-Service</p><div><p class="num">6–8</p><p class="s" style="margin:6px 0 14px">weeks to a running capability center</p><p class="go">Configure a Pod <span class="ad"><svg class="ar"><use href="#ar"/></svg></span></p></div></a>
         <article class="rc dark"><p class="mono">Annual revenue</p><div><p class="num">$<span data-count="50">50</span>M</p><p class="s">Publicly listed in India</p></div></article>
         <article class="rc"><p class="mono">On the record</p><ul class="ticks"><li>ISO 27001</li><li>SSAE 18</li><li>HIPAA</li><li>CMMI DEV/ML3</li><li>NMSDC MBE</li></ul></article>
         <article class="rc cloud"><p class="mono">Client result, MedTech</p><div><p class="num"><span data-count="5">5</span>X</p><p class="s">Productivity after ITSM automation, errors under 1%</p></div></article>
@@ -775,9 +775,9 @@ html.lenis,html.lenis body{height:auto}
 <section class="wrap" style="padding-top:clamp(24px,4vw,48px)">
   <div class="guide">
     <div class="gcard g-ask rv">
-      <div class="pat" data-pat="halftone" data-o='{"w":700,"h":560,"step":20,"cx":0.82,"cy":0.18,"size":360,"c":"#1A3A6B"}'></div>
+      <div class="pat" data-pat="halftone" data-o='{"w":700,"h":560,"step":20,"cx":0.82,"cy":0.18,"size":360,"c":"#2A2470"}'></div>
       <span data-vx style="display:contents"></span>
-      <p class="tag" style="color:#8AD6F7">Vector, your XTGlobal guide</p>
+      <p class="tag" style="color:#B7A6FF">Vector, your XTGlobal guide</p>
       <h3 style="margin-top:14px">Ask Me Anything About How We Deliver</h3>
       <form class="askbar" id="askbar"><label class="sr" for="q0">Your question</label><input id="q0" placeholder="How fast can a GCC pod go live?" autocomplete="off"><button>Ask</button></form>
       <div class="sugg"><button data-q="How does the 6 to 8 week GCC launch work?">The 6 to 8 week launch</button><button data-q="What security certifications do you hold?">Certifications held</button><button data-q="What is the difference between the three pod models?">Compare pod models</button></div>
@@ -808,7 +808,7 @@ html.lenis,html.lenis body{height:auto}
     <div class="bento rv">
       <article class="bc photo">
         <img class="ph" src="assets/img/campus-visakhapatnam.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span>
-        <div class="pat" data-pat="supergraphic" data-o='{"w":600,"h":1040,"x0":-0.35,"spacing":0.5,"c":"#4BBFEA","c2":"#1A3A6B","size":900}'></div>
+        <div class="pat" data-pat="supergraphic" data-o='{"w":600,"h":1040,"x0":-0.35,"spacing":0.5,"c":"#6E4BFF","c2":"#2A2470","size":900}'></div>
         <span class="slot">Visakhapatnam campus</span>
         <div class="over"><p class="mono">Qualified professionals</p><p class="n" style="margin-top:14px">700<sup>+</sup></p><p style="margin-top:8px">Hiring, training and retaining engineers in Hyderabad and Visakhapatnam since the late 1990s.</p></div>
       </article>
@@ -817,8 +817,8 @@ html.lenis,html.lenis body{height:auto}
         <q>Productivity up five times, and errors down to under one percent, after we automated onboarding and offboarding inside the client's ITSM.</q>
         <div class="bot"><div class="pills"><span>RPA</span><span>ITSM</span><span>Healthcare</span></div><a class="btn b-line" href="#results" style="height:46px">Case Study</a></div>
       </article>
-      <article class="bc sk"><div class="pat" data-pat="ramp" data-o='{"w":400,"h":400,"c":"#0A1B36","n":22}' style="opacity:.14"></div><p class="mono">Annual revenue</p><div><p class="n">$50M</p><p style="margin-top:8px">Publicly listed in India</p></div></article>
-      <article class="bc dk"><div class="pat" data-pat="bars" data-o='{"w":400,"h":400,"c":"#1A3A6B","rows":8,"n":16}'></div><p class="mono">In business</p><div><p class="n">25<sup>+</sup></p><p style="margin-top:8px">Years of enterprise delivery</p></div></article>
+      <article class="bc sk"><div class="pat" data-pat="ramp" data-o='{"w":400,"h":400,"c":"#120F33","n":22}' style="opacity:.14"></div><p class="mono">Annual revenue</p><div><p class="n">$50M</p><p style="margin-top:8px">Publicly listed in India</p></div></article>
+      <article class="bc dk"><div class="pat" data-pat="bars" data-o='{"w":400,"h":400,"c":"#2A2470","rows":8,"n":16}'></div><p class="mono">In business</p><div><p class="n">25<sup>+</sup></p><p style="margin-top:8px">Years of enterprise delivery</p></div></article>
       <article class="bc cl wide"><p class="mono">Audited, not asserted</p><div class="bot"><div><p class="n">200<sup>+</sup></p><p style="margin-top:8px">Programs delivered under ISO 27001, SSAE 18 and CMMI DEV/ML3 controls</p></div><div class="pills" style="max-width:220px;justify-content:flex-end"><span>ISO 27001</span><span>SSAE 18</span><span>HIPAA</span><span>CMMI DEV/ML3</span><span>NMSDC MBE</span></div></div></article>
     </div>
     <div class="diffs rv">
@@ -838,7 +838,7 @@ html.lenis,html.lenis body{height:auto}
       <a class="sv" href="#"><div class="row"><span class="ic" data-ic="code"></span><span class="go"><svg class="ar"><use href="#ar"/></svg></span></div><div><h3>Application &amp; Product Engineering</h3><p>Modernization, low-code and cloud-native builds.</p><div class="sub"><span>Mendix</span><span>Oracle APEX</span><span>Power Apps</span><span>QA</span></div></div></a>
       <a class="sv" href="#"><div class="row"><span class="ic" data-ic="ops"></span><span class="go"><svg class="ar"><use href="#ar"/></svg></span></div><div><h3>Managed Services &amp; IT Operations</h3><p>One operating model across every environment.</p><div class="sub"><span>Oracle</span><span>Microsoft</span><span>Hybrid IT</span></div></div></a>
       <a class="sv" href="#"><div class="row"><span class="ic" data-ic="data"></span><span class="go"><svg class="ar"><use href="#ar"/></svg></span></div><div><h3>Data &amp; Applied AI</h3><p>Data engineering, enterprise AI and automation.</p><div class="sub"><span>Databricks</span><span>Fabric</span><span>Power BI</span><span>RPA</span></div></div></a>
-      <a class="sv flag" href="#gcc"><div class="pat" data-pat="halftone" data-o='{"w":500,"h":440,"step":16,"cx":0.86,"cy":0.25,"size":300,"c":"#1A3A6B"}'></div><div class="row"><span class="badge">Flagship</span><span class="go"><svg class="ar"><use href="#ar"/></svg></span></div><div><h3>GCC-as-a-Service</h3><p>A dedicated offshore center we build, run and hand to you.</p><div class="sub"><span>Innovation</span><span>Operational</span><span>Hybrid</span></div></div></a>
+      <a class="sv flag" href="#gcc"><div class="pat" data-pat="halftone" data-o='{"w":500,"h":440,"step":16,"cx":0.86,"cy":0.25,"size":300,"c":"#2A2470"}'></div><div class="row"><span class="badge">Flagship</span><span class="go"><svg class="ar"><use href="#ar"/></svg></span></div><div><h3>GCC-as-a-Service</h3><p>A dedicated offshore center we build, run and hand to you.</p><div class="sub"><span>Innovation</span><span>Operational</span><span>Hybrid</span></div></div></a>
       <a class="sv" href="#"><div class="row"><span class="ic" data-ic="talent"></span><span class="go"><svg class="ar"><use href="#ar"/></svg></span></div><div><h3>Staffing &amp; ODTS</h3><p>On-demand talent of any type, for as long as needed.</p><div class="sub"><span>Contract</span><span>Contract-to-Hire</span></div></div></a>
       <a class="sv" href="#"><div class="row"><span class="ic" data-ic="sow"></span><span class="go"><svg class="ar"><use href="#ar"/></svg></span></div><div><h3>SoW Services</h3><p>Fixed scope, accountable outcomes, project by project.</p><div class="sub"><span>Fixed Bid</span><span>Milestone</span></div></div></a>
     </div>
@@ -850,20 +850,20 @@ html.lenis,html.lenis body{height:auto}
   <div class="wrap">
     <div class="shead rv"><p class="tag dim">Industries</p><h2>Where Regulated Work <span class="soft">Meets Volume</span></h2><p class="lede">Four sectors where uptime, audit trails and throughput decide the vendor.</p></div>
     <div class="ind rv">
-      <a class="ic2" href="#" data-ind="bfsi"><div class="stage" style="background:var(--navy)"><img class="ph" src="assets/img/ind-bfsi.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span><div class="pat" data-pat="ramp" data-o='{"w":700,"h":400,"n":26,"c":"#1A3A6B"}'></div>
+      <a class="ic2" href="#" data-ind="bfsi"><div class="stage" style="background:var(--navy)"><img class="ph" src="assets/img/ind-bfsi.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span><div class="pat" data-pat="ramp" data-o='{"w":700,"h":400,"n":26,"c":"#2A2470"}'></div>
         <div class="ui"><div class="uh"><b>Invoice Queue</b><span class="ok">SSAE 18</span></div>
         <div class="r"><span>INV-20418 · Logistics</span><em>$48,220.00</em></div><div class="r"><span>INV-20419 · Facilities</span><em>$12,906.40</em></div><div class="r"><span>INV-20420 · IT Services</span><em>$7,315.00</em></div></div>
         <span class="float" style="left:9%;top:16%"><i></i>Three-way match passed</span></div>
         <div class="txt"><h3>Banking, Financial Services &amp; Insurance</h3><p>Finance and accounting outsourcing, AP automation and controlled modernization.</p></div></a>
-      <a class="ic2" href="#" data-ind="health"><div class="stage" style="background:var(--sky1)"><img class="ph" src="assets/img/ind-health.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span><div class="pat" data-pat="halftone" data-o='{"w":700,"h":400,"step":18,"c":"#8AD6F7","cx":0.82,"size":320}'></div>
+      <a class="ic2" href="#" data-ind="health"><div class="stage" style="background:var(--sky1)"><img class="ph" src="assets/img/ind-health.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span><div class="pat" data-pat="halftone" data-o='{"w":700,"h":400,"step":18,"c":"#B7A6FF","cx":0.82,"size":320}'></div>
         <div class="ui"><div class="uh"><b>Revenue Cycle</b><span class="ok">HIPAA</span></div><p class="k">Claims cleared this week</p><p class="big" style="margin-top:4px">94.6%</p><div class="bars"><i style="height:40%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:66%"></i><i class="h" style="height:88%"></i><i class="h" style="height:94%"></i></div></div>
         <span class="float" style="right:7%;top:14%"><i></i>PHI access logged</span></div>
         <div class="txt"><h3>Healthcare &amp; Life Sciences</h3><p>HIPAA-aligned delivery for revenue cycle, ITSM and data platforms.</p></div></a>
-      <a class="ic2" href="#" data-ind="toll"><div class="stage" style="background:var(--cloud)"><img class="ph" src="assets/img/ind-toll.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span><div class="pat" data-pat="slip" data-o='{"w":700,"h":400,"rows":8,"cols":7,"c":"#E4E7EC"}'></div>
-        <div class="ui dk"><div class="uh"><b>Toll Transactions</b><span class="ok" style="background:#1A3A6B;color:#8AD6F7">OCI</span></div>
-        <div class="r"><span>Lanes online</span><em style="color:#fff">412 / 412</em></div><div class="r"><span>Transactions today</span><em style="color:#fff">1,284,930</em></div><div class="r"><span>Posting latency</span><em style="color:#8AD6F7">0.8 s</em></div></div></div>
+      <a class="ic2" href="#" data-ind="toll"><div class="stage" style="background:var(--cloud)"><img class="ph" src="assets/img/ind-toll.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span><div class="pat" data-pat="slip" data-o='{"w":700,"h":400,"rows":8,"cols":7,"c":"#E2DFEE"}'></div>
+        <div class="ui dk"><div class="uh"><b>Toll Transactions</b><span class="ok" style="background:#2A2470;color:#B7A6FF">OCI</span></div>
+        <div class="r"><span>Lanes online</span><em style="color:#fff">412 / 412</em></div><div class="r"><span>Transactions today</span><em style="color:#fff">1,284,930</em></div><div class="r"><span>Posting latency</span><em style="color:#B7A6FF">0.8 s</em></div></div></div>
         <div class="txt"><h3>Toll, Transportation &amp; Logistics</h3><p>High-volume transaction processing on Oracle Cloud with managed operations.</p></div></a>
-      <a class="ic2" href="#" data-ind="tech"><div class="stage" style="background:var(--navy)"><img class="ph" src="assets/img/ind-tech.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span><div class="pat" data-pat="burst" data-o='{"w":700,"h":400,"cx":0.5,"cy":0.5,"rings":10,"spokes":28,"gap":30,"r0":60,"c":"#2A4E85","core":false}'></div>
+      <a class="ic2" href="#" data-ind="tech"><div class="stage" style="background:var(--navy)"><img class="ph" src="assets/img/ind-tech.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span><div class="pat" data-pat="burst" data-o='{"w":700,"h":400,"cx":0.5,"cy":0.5,"rings":10,"spokes":28,"gap":30,"r0":60,"c":"#3B34A0","core":false}'></div>
         <div class="pipe"><span>Intake</span><i></i><span class="on">Automate</span><i></i><span>Review</span><i></i><span>Ship</span></div></div>
         <div class="txt"><h3>Technology &amp; Communications</h3><p>Product engineering, automation and on-demand talent at scale.</p></div></a>
     </div>
@@ -873,7 +873,7 @@ html.lenis,html.lenis body{height:auto}
 <!-- ================= GCC ================= -->
 <section class="gcc" id="gcc">
   <img class="ph" src="assets/img/gcc-campus-night.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span>
-  <div class="pat" data-pat="field" data-o='{"w":1400,"h":1400,"cols":28,"rows":28,"c":"#10284D"}'></div>
+  <div class="pat" data-pat="field" data-o='{"w":1400,"h":1400,"cols":28,"rows":28,"c":"#1E1A5C"}'></div>
   <div class="wrap sec">
     <div class="shead rv"><p class="tag">GCC-as-a-Service, our flagship</p><h2>Your Offshore Capability Center, <span style="color:var(--sky3)">Running in Six to Eight Weeks</span></h2><p class="lede">Choose an Innovation, Operational, or Hybrid pod. We build the team, run the infrastructure, and hand you the controls.</p></div>
     <div class="pods rv" role="group" aria-label="Pod type">
@@ -883,7 +883,7 @@ html.lenis,html.lenis body{height:auto}
     </div>
     <div class="cfg rv">
       <div class="cbox">
-        <p class="tag" style="color:#8AD6F7;margin-bottom:26px">Pod configurator</p>
+        <p class="tag" style="color:#B7A6FF;margin-bottom:26px">Pod configurator</p>
         <div class="fl2"><label for="size">Team size <output id="size-o">24 people</output></label><input type="range" id="size" min="8" max="60" step="2" value="24"></div>
         <div class="fl2"><span class="lb">Campus</span><div class="seg2" id="loc"><button data-loc="Hyderabad" aria-pressed="false">Hyderabad</button><button data-loc="Visakhapatnam" aria-pressed="true">Visakhapatnam</button><button data-loc="Both Campuses" aria-pressed="false">Both</button></div></div>
         <div class="fl2" style="margin:0"><span class="lb">What you control</span><p class="ctl">Roadmap, priorities and day-to-day direction. XTGlobal carries hiring, facilities, network, security and HR.</p></div>
@@ -913,8 +913,8 @@ html.lenis,html.lenis body{height:auto}
         <a class="btn b-ink" href="#" style="align-self:flex-start">Visit Circulus <span class="ad"><svg class="ar"><use href="#ar"/></svg></span></a>
       </div>
       <div class="pc b est">
-        <div class="pat" data-pat="ramp" data-o='{"w":700,"h":700,"n":30,"c":"#10284D"}'></div>
-        <p class="tag" style="color:#8AD6F7;margin-bottom:26px">Value estimator</p>
+        <div class="pat" data-pat="ramp" data-o='{"w":700,"h":700,"n":30,"c":"#1E1A5C"}'></div>
+        <p class="tag" style="color:#B7A6FF;margin-bottom:26px">Value estimator</p>
         <div class="fl2"><label for="inv">Invoices per month <output id="inv-o">5,000</output></label><input type="range" id="inv" min="500" max="50000" step="500" value="5000"></div>
         <div class="estn"><div><b id="hrs">750</b><span>staff hours returned each month</span></div><div><b id="fte">4.7</b><span>full-time roles freed for analysis</span></div></div>
         <p class="note">Illustrative model: 12 minutes per invoice by hand, 3 minutes with Circulus. Replace with XTGlobal benchmark data before launch.</p>
@@ -942,7 +942,7 @@ html.lenis,html.lenis body{height:auto}
     <div class="shead rv"><p class="tag dim">Investors</p><h2>A Listed Company, <span class="soft">Open to Scrutiny</span></h2><p class="lede">Results, filings and governance documents are published here first, in full.</p></div>
     <div class="inv rv">
       <article class="iv"><p class="k">Performance</p><h3>Financial Results</h3><ul><li><a href="#">Quarterly Results <small>PDF</small></a></li><li><a href="#">Earnings Releases <small>PDF</small></a></li><li><a href="#">Stock Exchange Filings <small>List</small></a></li></ul><a class="btn b-line" href="#">All Results</a></article>
-      <article class="iv ft"><div class="pat" data-pat="burst" data-o='{"w":500,"h":620,"cx":1,"cy":0,"rings":14,"spokes":36,"gap":34,"r0":40,"c":"#1A3A6B","core":false}'></div><p class="k">Featured</p><h3>Annual Report</h3><div class="ticker"><span>Share price<br>Live exchange feed</span><b>—</b></div><ul><li><a href="#">Latest Annual Report <small>PDF</small></a></li><li><a href="#">Shareholding Pattern <small>Quarterly</small></a></li><li><a href="#">AGM Notices <small>PDF</small></a></li></ul><a class="btn b-sky" href="#">Download Report <span class="ad"><svg class="ar"><use href="#ar"/></svg></span></a></article>
+      <article class="iv ft"><div class="pat" data-pat="burst" data-o='{"w":500,"h":620,"cx":1,"cy":0,"rings":14,"spokes":36,"gap":34,"r0":40,"c":"#2A2470","core":false}'></div><p class="k">Featured</p><h3>Annual Report</h3><div class="ticker"><span>Share price<br>Live exchange feed</span><b>—</b></div><ul><li><a href="#">Latest Annual Report <small>PDF</small></a></li><li><a href="#">Shareholding Pattern <small>Quarterly</small></a></li><li><a href="#">AGM Notices <small>PDF</small></a></li></ul><a class="btn b-sky" href="#">Download Report <span class="ad"><svg class="ar"><use href="#ar"/></svg></span></a></article>
       <article class="iv"><p class="k">Governance</p><h3>Board &amp; Policies</h3><ul><li><a href="#">Board of Directors <small>Profiles</small></a></li><li><a href="#">Corporate Governance <small>Policies</small></a></li><li><a href="#">Investor Grievance Desk <small>Contact</small></a></li></ul><a class="btn b-line" href="#">Governance</a></article>
     </div>
   </div>
@@ -970,9 +970,9 @@ html.lenis,html.lenis body{height:auto}
   <div class="wrap">
     <div class="shead rv"><p class="tag dim">Insights</p><h2>Latest Case Studies <span class="soft">&amp; Thinking</span></h2></div>
     <div class="posts rv">
-      <a class="post" href="#"><div class="th" data-pat-bg="bars" style="background:var(--navy)"><img class="ph" src="assets/img/case-toll.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="pat" data-pat="bars" data-o='{"w":600,"h":400,"rows":7,"n":22,"c":"#4BBFEA"}'></div><span class="lbl">Case study</span></div><div class="meta"><span>Transportation</span><span>6 min read</span></div><h3>Optimizing Toll Transaction Processing With Oracle Cloud Migration</h3></a>
-      <a class="post" href="#"><div class="th" style="background:var(--sky)"><img class="ph" src="assets/img/case-rev.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="pat" data-pat="halftone" data-o='{"w":600,"h":400,"step":16,"c":"#0A1B36","size":300}'></div><span class="lbl">Case study</span></div><div class="meta"><span>Healthcare</span><span>5 min read</span></div><h3>Optimizing Healthcare Revenue Management With OCI and Automation</h3></a>
-      <a class="post" href="#"><div class="th" style="background:var(--cloud)"><img class="ph" src="assets/img/case-apex.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="pat" data-pat="slip" data-o='{"w":600,"h":400,"rows":7,"cols":6,"c":"#0A1B36"}'></div><span class="lbl">Case study</span></div><div class="meta"><span>Modernization</span><span>4 min read</span></div><h3>Modernizing Legacy Applications Using Oracle APEX and OCI</h3></a>
+      <a class="post" href="#"><div class="th" data-pat-bg="bars" style="background:var(--navy)"><img class="ph" src="assets/img/case-toll.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="pat" data-pat="bars" data-o='{"w":600,"h":400,"rows":7,"n":22,"c":"#6E4BFF"}'></div><span class="lbl">Case study</span></div><div class="meta"><span>Transportation</span><span>6 min read</span></div><h3>Optimizing Toll Transaction Processing With Oracle Cloud Migration</h3></a>
+      <a class="post" href="#"><div class="th" style="background:var(--sky)"><img class="ph" src="assets/img/case-rev.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="pat" data-pat="halftone" data-o='{"w":600,"h":400,"step":16,"c":"#120F33","size":300}'></div><span class="lbl">Case study</span></div><div class="meta"><span>Healthcare</span><span>5 min read</span></div><h3>Optimizing Healthcare Revenue Management With OCI and Automation</h3></a>
+      <a class="post" href="#"><div class="th" style="background:var(--cloud)"><img class="ph" src="assets/img/case-apex.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="pat" data-pat="slip" data-o='{"w":600,"h":400,"rows":7,"cols":6,"c":"#120F33"}'></div><span class="lbl">Case study</span></div><div class="meta"><span>Modernization</span><span>4 min read</span></div><h3>Modernizing Legacy Applications Using Oracle APEX and OCI</h3></a>
     </div>
   </div>
 </section>
@@ -980,10 +980,10 @@ html.lenis,html.lenis body{height:auto}
 <!-- ================= CTA + CONTACT ================= -->
 <section class="cta" id="contact">
   <img class="ph" src="assets/img/cta-bridge.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="shade"></span>
-  <div class="pat" data-pat="supergraphic" data-o='{"w":1400,"h":800,"x0":0.62,"spacing":260,"size":980,"c":"#1A3A6B","c2":"#10284D"}'></div>
+  <div class="pat" data-pat="supergraphic" data-o='{"w":1400,"h":800,"x0":0.62,"spacing":260,"size":980,"c":"#2A2470","c2":"#1E1A5C"}'></div>
   <div class="ctag">
     <div class="rv">
-      <p class="tag" style="color:#8AD6F7">Contact</p>
+      <p class="tag" style="color:#B7A6FF">Contact</p>
       <h2 style="margin-top:20px">Start With a Conversation</h2>
       <p class="lede">Tell us what you are evaluating. A solution lead in Plano replies within one business day.</p>
       <div class="dir"><a href="tel:+19727551800">+1 972.755.1800</a><a href="mailto:info@xtglobal.com">info@xtglobal.com</a></div>
@@ -1004,15 +1004,15 @@ html.lenis,html.lenis body{height:auto}
 </section>
 
 <footer class="foot">
-  <div class="pat" data-pat="field" data-o='{"w":1400,"h":500,"cols":40,"rows":14,"c":"#10284D"}'></div>
+  <div class="pat" data-pat="field" data-o='{"w":1400,"h":500,"cols":40,"rows":14,"c":"#1E1A5C"}'></div>
   <div class="fg">
     <div class="fbrand"><a class="brandpill" href="#top"><img src="assets/logos/xtglobal-logo-white.png" alt="XTGlobal, Technology Meets Vision" style="height:56px"></a><p style="max-width:32ch;font-size:14.5px">Technology consulting, managed services and offshore delivery for enterprises that cannot afford to guess.</p>
       <form class="news" onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('input').placeholder='Subscribed. Thank you.'"><label class="sr" for="nl">Email</label><input id="nl" type="email" placeholder="Work email for insights"><button>Subscribe <span><svg class="ar"><use href="#ar"/></svg></span></button></form>
     </div>
-    <div><h4>Services</h4><a href="#">Application &amp; Product Engineering</a><a href="#">Managed Services</a><a href="#">Data &amp; Applied AI</a><a href="#gcc">GCC-as-a-Service</a><a href="#">Staffing &amp; ODTS</a><a href="#">SoW Services</a></div>
-    <div><h4>Industries</h4><a href="#">Banking &amp; Insurance</a><a href="#">Healthcare</a><a href="#">Toll &amp; Logistics</a><a href="#">Technology</a><a href="#">Public Sector</a></div>
+    <div><h4>Services</h4><a href="#">Application and Product Engineering</a><a href="#">Managed Services</a><a href="#">Data and Applied AI</a><a href="#gcc">GCC-as-a-Service</a><a href="#">Staffing and ODTS</a><a href="#">SoW Services</a></div>
+    <div><h4>Industries</h4><a href="#">Banking and Insurance</a><a href="#">Healthcare</a><a href="#">Toll and Logistics</a><a href="#">Technology</a><a href="#">Public Sector</a></div>
     <div><h4>Company</h4><a href="#">Our Story</a><a href="#">Leadership</a><a href="#">Board of Directors</a><a href="#investors">Investors</a><a href="#">Careers</a><a href="#">Downloads</a></div>
-    <div><h4>Products</h4><a href="#">Circulus</a><a href="#">Network Objects</a><h4 style="margin-top:22px">Trust</h4><a href="#">Privacy &amp; Security</a><a href="#">Cookie Settings</a><a href="#">Accessibility</a></div>
+    <div><h4>Products</h4><a href="#">Circulus</a><a href="#">Network Objects</a><h4 style="margin-top:22px">Trust</h4><a href="#">Privacy and Security</a><a href="#">Cookie Settings</a><a href="#">Accessibility</a></div>
   </div>
   <div class="fb"><span>© 2026 XTGlobal Inc. All rights reserved.</span><span class="lang">EN <span style="opacity:.5">· more languages planned</span></span><span>Plano TX | Hyderabad | Visakhapatnam | +1 972.755.1800</span></div>
 </footer>
@@ -1037,9 +1037,9 @@ html.lenis,html.lenis body{height:auto}
    existing site motif (xtg-motif.svg). Deterministic: same input, same output. */
 const XT = (() => {
   const C = {
-    midnight:'#061226', navy:'#0A1B36', n800:'#10284D', n700:'#1A3A6B', n600:'#2A4E85', n500:'#3E6299',
-    sky:'#4BBFEA', sky3:'#8AD6F7', sky1:'#D6F0FB', sky7:'#0A5E9E',
-    cloud:'#F3F4F6', mist:'#E4E7EC', slate:'#5A6A84', slate3:'#A9B4C6', white:'#FFFFFF', copper:'#C96A1B'
+    midnight:'#0B0922', navy:'#120F33', n800:'#1E1A5C', n700:'#2A2470', n600:'#3B34A0', n500:'#4C44B8',
+    sky:'#6E4BFF', sky3:'#B7A6FF', sky1:'#ECE8FF', sky7:'#5B3DF5',
+    cloud:'#F4F2FA', mist:'#E2DFEE', slate:'#5B5A7A', slate3:'#A7A3C4', white:'#FFFFFF', copper:'#FF7A3D'
   };
   /* the brand chevron, exactly as published on xtglobal.com (xtg-motif.svg, 229.2 x 382) */
   const CHEV = 'M.344 0s112.343 168.172 112.343 190.56S0 382 0 382s77.833-52.415 135.352-100.275S229.2 190.56 229.2 190.56s-36.423-41.942-93.85-89.582S.344 0 .344 0z';
@@ -1186,7 +1186,7 @@ const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 /* render brand patterns */
 $$('[data-pat]').forEach(el=>{const fn=XT[el.dataset.pat];if(!fn)return;let o={};try{o=JSON.parse(el.dataset.o||'{}')}catch(e){}
  const W=o.w||800,H=o.h||800;['cx','cy','x0'].forEach(k=>{if(o[k]!=null&&o[k]<=1.5&&k!=='x0')o[k]=o[k]*(k==='cx'?W:H)});el.innerHTML=fn(o)});
-$$('[data-ico]').forEach(el=>{const t=el.dataset.ico;el.innerHTML=t==='field'?XT.field({w:120,h:100,cols:5,rows:4,c:'#0A1B36'}):XT.burst({w:120,h:100,rings:5,spokes:14,gap:9,r0:10,len:8,sw:3,c:'#4BBFEA',coreSize:14})});
+$$('[data-ico]').forEach(el=>{const t=el.dataset.ico;el.innerHTML=t==='field'?XT.field({w:120,h:100,cols:5,rows:4,c:'#120F33'}):XT.burst({w:120,h:100,rings:5,spokes:14,gap:9,r0:10,len:8,sw:3,c:'#6E4BFF',coreSize:14})});
 $$('[data-vx]').forEach(el=>el.innerHTML=XT.avatar('idle',44));
 const setVx=s=>$$('.vx').forEach(v=>v.dataset.state=s);
 
@@ -1239,7 +1239,7 @@ const SEG={all:{c:['medtech','toll','print','apex'],l:'Recent programs across au
  inv:{c:['medtech','toll','print','apex'],l:'Recent programs across automation, cloud and managed operations.',o:'<b>Investor or shareholder.</b> Results, filings and governance are in the <a href="#investors" style="color:var(--sky7)">Investors section</a>.'}};
 let cur='all',idx=0;
 function showCase(i){idx=i;const k=SEG[cur].c[i],c=CASES[k],b=$('#rbig');
- b.innerHTML=`<img class="ph" src="assets/img/case-${k}.jpg" alt="" onerror="this.remove()"><span class="shade"></span><div class="pat">${XT.halftone({w:700,h:520,step:18,c:'#10284D',cx:560,cy:150,size:420})}</div><div class="fade"><p class="k">${c.k}</p><p class="n" style="margin-top:28px">${c.n}</p></div><div class="fade"><h3>${c.t}</h3><p style="color:#C3CDDC;margin-top:10px;max-width:46ch">${c.d}</p></div><div class="ctl2"><a class="btn b-sky" href="#">Read the Case Study <span class="ad"><svg class="ar"><use href="#ar"/></svg></span></a><div class="arrows"><button id="pv" aria-label="Previous"><svg width="16" height="16"><use href="#arl"/></svg></button><button id="nx" aria-label="Next"><svg width="16" height="16"><use href="#arr"/></svg></button></div></div>`;
+ b.innerHTML=`<img class="ph" src="assets/img/case-${k}.jpg" alt="" onerror="this.remove()"><span class="shade"></span><div class="pat">${XT.halftone({w:700,h:520,step:18,c:'#1E1A5C',cx:560,cy:150,size:420})}</div><div class="fade"><p class="k">${c.k}</p><p class="n" style="margin-top:28px">${c.n}</p></div><div class="fade"><h3>${c.t}</h3><p style="color:#C2BCE6;margin-top:10px;max-width:46ch">${c.d}</p></div><div class="ctl2"><a class="btn b-sky" href="#">Read the Case Study <span class="ad"><svg class="ar"><use href="#ar"/></svg></span></a><div class="arrows"><button id="pv" aria-label="Previous"><svg width="16" height="16"><use href="#arl"/></svg></button><button id="nx" aria-label="Next"><svg width="16" height="16"><use href="#arr"/></svg></button></div></div>`;
  $('#pv').onclick=()=>showCase((idx+3)%4);$('#nx').onclick=()=>showCase((idx+1)%4);
  $$('.ri').forEach((r,j)=>r.setAttribute('aria-current',j===i))}
 function renderSeg(s){cur=s;const S=SEG[s];$('#rlede').textContent=S.l;$('#hout').innerHTML=S.o;
@@ -1250,9 +1250,9 @@ $$('.seg').forEach(b=>b.onclick=()=>{const on=b.getAttribute('aria-pressed')!=='
 renderSeg('all');
 
 /* GCC configurator */
-const MIX={innovation:[['Product Engineers',.5,'#4BBFEA'],['Data & AI',.25,'#0A1B36'],['Quality Engineering',.15,'#A9B4C6'],['Pod Lead & Architect',.1,'#C96A1B']],
- operational:[['Application Support',.45,'#4BBFEA'],['Infrastructure & SRE',.25,'#0A1B36'],['Service Desk',.2,'#A9B4C6'],['Delivery Lead',.1,'#C96A1B']],
- hybrid:[['Product Engineers',.35,'#4BBFEA'],['Run & Support',.3,'#0A1B36'],['Data & Quality',.25,'#A9B4C6'],['Pod Lead & Architect',.1,'#C96A1B']]};
+const MIX={innovation:[['Product Engineers',.5,'#6E4BFF'],['Data & AI',.25,'#120F33'],['Quality Engineering',.15,'#A7A3C4'],['Pod Lead & Architect',.1,'#FF7A3D']],
+ operational:[['Application Support',.45,'#6E4BFF'],['Infrastructure & SRE',.25,'#120F33'],['Service Desk',.2,'#A7A3C4'],['Delivery Lead',.1,'#FF7A3D']],
+ hybrid:[['Product Engineers',.35,'#6E4BFF'],['Run & Support',.3,'#120F33'],['Data & Quality',.25,'#A7A3C4'],['Pod Lead & Architect',.1,'#FF7A3D']]};
 const st={pod:'hybrid',size:24,loc:'Visakhapatnam'};
 const fill=r=>r.style.setProperty('--p',((r.value-r.min)/(r.max-r.min)*100)+'%');
 function cfg(){const wk=st.size<=16?6:st.size<=36?7:8;$('#wk').textContent=wk;$('#size-o').textContent=st.size+' people';$('#podname').textContent=st.pod+' pod';
@@ -1266,7 +1266,7 @@ $('#size').oninput=e=>{st.size=+e.target.value;cfg()};
 $$('#loc button').forEach(b=>b.onclick=()=>{st.loc=b.dataset.loc;$$('#loc button').forEach(x=>x.setAttribute('aria-pressed',x===b));cfg()});
 cfg();
 $('#dl').onclick=()=>{const nm=st.pod[0].toUpperCase()+st.pod.slice(1);
- const html=`<!doctype html><meta charset="utf-8"><title>XTGlobal GCC Pod Summary</title><style>body{font:16px/1.5 system-ui,sans-serif;color:#0A1B36;max-width:720px;margin:48px auto;padding:0 24px}h1{font-size:36px;letter-spacing:-.04em;margin:8px 0}small{font-size:14px;font-weight:500;color:#5A6A84}table{width:100%;border-collapse:collapse;margin:24px 0}td{padding:12px 0;border-bottom:1px solid #E4E7EC}td:last-child{text-align:right;font-weight:600}.k{font-size:72px;letter-spacing:-.06em;font-weight:500;margin:0}</style><small>XTGlobal, GCC-as-a-Service, indicative summary</small><h1>${nm} Pod, ${st.size} People</h1><p>Campus: ${st.loc}</p><p class="k">${st.wk} weeks</p><p>Indicative launch</p><table>${st.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table><p>Blueprint weeks 1 to 2, Hire and Build weeks 2 to ${st.wk-1}, Go Live weeks ${st.wk-1} to ${st.wk}.</p><p>We build the team, run the infrastructure, and hand you the controls. Indicative only, not a quote.</p><p>+1 972.755.1800 | info@xtglobal.com</p>`;
+ const html=`<!doctype html><meta charset="utf-8"><title>XTGlobal GCC Pod Summary</title><style>body{font:16px/1.5 system-ui,sans-serif;color:#120F33;max-width:720px;margin:48px auto;padding:0 24px}h1{font-size:36px;letter-spacing:-.04em;margin:8px 0}small{font-size:14px;font-weight:500;color:#5B5A7A}table{width:100%;border-collapse:collapse;margin:24px 0}td{padding:12px 0;border-bottom:1px solid #E2DFEE}td:last-child{text-align:right;font-weight:600}.k{font-size:72px;letter-spacing:-.06em;font-weight:500;margin:0}</style><small>XTGlobal, GCC-as-a-Service, indicative summary</small><h1>${nm} Pod, ${st.size} People</h1><p>Campus: ${st.loc}</p><p class="k">${st.wk} weeks</p><p>Indicative launch</p><table>${st.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table><p>Blueprint weeks 1 to 2, Hire and Build weeks 2 to ${st.wk-1}, Go Live weeks ${st.wk-1} to ${st.wk}.</p><p>We build the team, run the infrastructure, and hand you the controls. Indicative only, not a quote.</p><p>+1 972.755.1800 | info@xtglobal.com</p>`;
  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([html],{type:'text/html'}));a.download='XTGlobal-GCC-Pod-Summary.html';a.click()};
 
 /* Circulus estimator */
