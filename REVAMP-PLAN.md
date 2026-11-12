@@ -203,7 +203,8 @@ What changes with either: glass nav becomes solid paper with a hairline; buttons
 3. **Campus diagram on the interior page, not the homepage.** One anchor per block; the homepage shows the configurator, the GCC page shows the campus.
 4. **Live prototype over Figma click-through.** Developers get working code and real motion timings.
 5. **Reveals are not micro-interactions.** Interactions stay under 300ms; entrances are longer and disabled for reduced motion.
-6. **Ideas we drop:** full dark theme as a launch feature (ship the token system now, the toggle in phase two), and the engagement builder as a separate module (the configurator already is one; adding the lead capture makes it the builder).
+6. **Logo colour and sky blue (client decision, 13 Nov 2026).** At the client's request the chevron is recoloured to the Vector Violet ramp and sky blue is removed entirely, with lilac `#C4B5FF` as the action colour. The brief lists "logo modification" as an elimination reason and names sky blue for action as mandatory. Argue in the notes: geometry and wordmark are untouched, the refresh is the colour brief's own goal, and every pairing clears WCAG AA. Keep `assets/logos/xtglobal-logo-header.png` (original colours) so the submission can revert in one line if the client changes its mind.
+7. **Ideas we drop:** full dark theme as a launch feature (ship the token system now, the toggle in phase two), and the engagement builder as a separate module (the configurator already is one; adding the lead capture makes it the builder).
 
 ## 6. "What I would add" (one line each, draft)
 
