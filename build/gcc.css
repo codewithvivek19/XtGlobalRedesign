@@ -17,7 +17,7 @@
 /* ---------- hero ---------- */
 .gx-hero{position:relative;margin:10px;border-radius:32px;overflow:hidden;isolation:isolate;background:var(--navy);color:#fff;min-height:min(920px,100svh);display:flex;align-items:flex-end}
 .gx-hero>.ph{object-position:60% 40%}
-.gx-hero>.shade{background:linear-gradient(90deg,rgba(11,9,34,.97) 0%,rgba(11,9,34,.88) 42%,rgba(18,15,51,.45) 75%,rgba(18,15,51,.25)),linear-gradient(0deg,rgba(11,9,34,.9),transparent 45%)}
+.gx-hero>.shade{background:linear-gradient(90deg,rgba(15,14,31,.97) 0%,rgba(15,14,31,.88) 42%,rgba(21,20,43,.45) 75%,rgba(21,20,43,.25)),linear-gradient(0deg,rgba(15,14,31,.9),transparent 45%)}
 .gx-hero>.pat{z-index:-1;opacity:.35}
 .gx-hero-in{position:relative;width:100%;padding-top:150px;padding-bottom:clamp(36px,5vw,56px)}
 .crumb{display:flex;gap:10px;align-items:center;font-size:13.5px;color:#B2ADD1;margin-bottom:28px}
