@@ -428,3 +428,8 @@ html{scrollbar-color:#C9C9D2 transparent}
 /* patterns on dark panels whisper, never tint */
 .gcc>.pat,.g-ask>.pat,.sv.flag>.pat,.iv.ft>.pat,.bc.dk>.pat,.pc.b>.pat,.rc>.pat,.foot>.pat,.cta>.pat{opacity:.22!important}
 .gx-hero>.pat,.gx-campus>.pat{opacity:.22}
+
+/* brief: micro-interactions under 300ms */
+.roll>span{transition-duration:280ms}
+.tilt{transition-duration:280ms}
+.sv,.df,.ic2,.iv,.ct,.hw,.post .th{transition-duration:260ms}
