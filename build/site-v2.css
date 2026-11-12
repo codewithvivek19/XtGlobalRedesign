@@ -364,3 +364,12 @@ input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 6px rgba(110,75,255,.25
 /* hero copy column spans the hero so the Vector bar can size to it */
 .hero-inner{width:100%;display:flex;flex-direction:column;align-items:center}
 .vbar{width:100%;max-width:600px}
+
+/* homepage GCC block links to the full page */
+.gx-more{margin:-18px 0 22px}
+.gx-more a{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--sky3);border-bottom:1px solid rgba(196,181,255,.35);padding-bottom:4px}
+.gx-more a:hover{color:#fff;border-color:#fff}
+
+/* footer: brand block spans the row on tablets; link columns never squeezed off-screen */
+@media(max-width:960px){.fg{grid-template-columns:repeat(2,minmax(0,1fr))}.fbrand{grid-column:1/-1}}
+@media(max-width:420px){.fg{grid-template-columns:minmax(0,1fr)}}
