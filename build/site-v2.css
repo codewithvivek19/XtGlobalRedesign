@@ -373,3 +373,58 @@ input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 6px rgba(110,75,255,.25
 /* footer: brand block spans the row on tablets; link columns never squeezed off-screen */
 @media(max-width:960px){.fg{grid-template-columns:repeat(2,minmax(0,1fr))}.fbrand{grid-column:1/-1}}
 @media(max-width:420px){.fg{grid-template-columns:minmax(0,1fr)}}
+
+/* =========================================================
+   BALANCE PASS: neutral surfaces, natural photography,
+   violet as a precise accent, dark kept for a few moments.
+   Dark is reserved for: Vector's stage, the GCC flagship,
+   a handful of feature cards, contact and the footer.
+   ========================================================= */
+:root{
+  --void:#0F0E1F;--midnight:#0F0E1F;--navy:#15142B;--n800:#211F3B;--n700:#2D2B4B;--n600:#403D66;
+  --sky:#FFFFFF;--sky3:#C9C1F4;--sky1:#EFECFB;--sky7:#5B3DF5;
+  --cloud:#F5F5F7;--mist:#E6E6EB;--slate:#5E5D70;--slate3:#A4A3B6;
+  --ink:#121126;--ink2:#55546A;--line:rgba(18,17,38,.09);
+}
+body{background:#fff}
+::-webkit-scrollbar-thumb{background:#C9C9D2}
+html{scrollbar-color:#C9C9D2 transparent}
+.b-sky:hover{background:#ECEAF6}
+.tag::before{background:var(--indigo);box-shadow:0 0 0 3px rgba(110,75,255,.18)}
+.bigline .ico.a{background:var(--indigo)}
+.ri[aria-current="true"] .pr{background:var(--indigo);color:#fff}
+.seg2 button[aria-pressed="true"]{background:#fff;color:var(--ink);border-color:#fff}
+
+/* hero: daylight, neutral sky, the photo settles into paper instead of night */
+.shell.day{background:linear-gradient(180deg,#E8EBF0 0%,#F1F3F6 34%,#F8F9FA 58%,#F5F5F7 100%)}
+.shell.day .shade{background:linear-gradient(180deg,rgba(255,255,255,0) 52%,rgba(245,245,247,.55) 74%,rgba(245,245,247,.94) 90%,#F5F5F7 100%)}
+.shell.day>img.ph{filter:none}
+.shell.day>.pat{opacity:.16;mix-blend-mode:normal}
+.sky-fx .haze{background:radial-gradient(closest-side,rgba(255,255,255,.55),rgba(255,255,255,0))}
+.floor::before{background:linear-gradient(90deg,transparent,rgba(18,17,38,.14),transparent)}
+.rc{-webkit-box-reflect:below 12px linear-gradient(transparent 70%,rgba(255,255,255,.22))}
+.rc,.rc.front{box-shadow:0 1px 2px rgba(18,17,38,.06),0 30px 60px -28px rgba(18,17,38,.32)}
+.rc.dark,.rc.mid,.rc.ask,.rc.dark.front,.rc.mid.front,.rc.ask.front{box-shadow:0 1px 2px rgba(18,17,38,.1),0 30px 60px -26px rgba(18,17,38,.5)}
+.rc.cloud{background:#F2F2F5}
+
+/* client wall: light, ink logos, hairline grid */
+.allies{background:#F5F5F7;color:var(--ink)}
+.allies-head p{color:var(--ink)}
+.allies-link{color:var(--sky7);border-bottom-color:rgba(91,61,245,.3)}
+.allies-link:hover{color:var(--ink);border-color:var(--ink)}
+.allies .mtrack li{border-color:rgba(18,17,38,.08);background:#fff}
+.allies .mtrack li::after{background:rgba(110,75,255,.05)}
+.allies .mtrack img{opacity:.62}
+.apk{color:var(--slate)}
+.ap img{margin-left:-12px}
+.acerts li{color:var(--ink);border-color:rgba(18,17,38,.12);background:#fff}
+.acerts li::before{border-color:var(--indigo)}
+
+/* light sections read as one calm paper; dark accents stay solid */
+.g-here,.bc.cl,.pc.a,.iv:not(.ft),.ic2,.nobj,.ri,.ct,.band,.tray,.logos div{background:var(--cloud)}
+.sv{border-color:var(--mist)}
+.bigline .soft{color:#7A7990}
+
+/* patterns on dark panels whisper, never tint */
+.gcc>.pat,.g-ask>.pat,.sv.flag>.pat,.iv.ft>.pat,.bc.dk>.pat,.pc.b>.pat,.rc>.pat,.foot>.pat,.cta>.pat{opacity:.22!important}
+.gx-hero>.pat,.gx-campus>.pat{opacity:.22}
