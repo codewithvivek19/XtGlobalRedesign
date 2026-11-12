@@ -10,7 +10,7 @@
 :root{--midnight:#0B0922;--navy:#120F33;--n800:#1E1A5C;--n700:#2A2470;--n600:#3B34A0;--sky:#6E4BFF;--sky3:#B7A6FF;--sky1:#ECE8FF;--sky7:#5B3DF5;--cloud:#F4F2FA;--mist:#E2DFEE;--slate:#5B5A7A;--slate3:#A7A3C4;--copper:#FF7A3D;
 --f:"Geist",system-ui,sans-serif;--m:var(--f)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--f);background:#DDE2EA;color:var(--navy);letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+body{font-family:var(--f);background:#E7E3F3;color:var(--navy);letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
 img,svg{display:block;max-width:100%}
 .page{max-width:1320px;margin:0 auto;padding:clamp(12px,2vw,28px)}
 .g{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
@@ -25,7 +25,7 @@ h3{font-size:22px;font-weight:500;letter-spacing:-.035em;line-height:1.2}
 p{line-height:1.55}
 .sp{grid-column:span var(--s,12)}
 .sec{margin:56px 4px 18px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
-.sec p{max-width:56ch;color:#3A4A64}
+.sec p{max-width:56ch;color:#2A2470}
 .plate{display:inline-flex;align-items:center;background:#fff;border-radius:999px;padding:12px 22px}
 .plate img{height:30px;width:auto}
 .ctr{display:grid;place-items:center}
@@ -102,8 +102,8 @@ p{line-height:1.55}
 .ph-t{display:flex;align-items:flex-end;background:var(--n800)}
 .ph-k{background:rgba(11,9,34,.72);color:#fff!important;border-radius:999px;padding:7px 14px}
 /* applications */
-.stage{background:#C9D1DD;min-height:560px;display:flex;justify-content:center;align-items:center;gap:22px;flex-wrap:wrap;padding:48px}
-.stage.dk{background:#0E1C33}
+.stage{background:#D6D0EA;min-height:560px;display:flex;justify-content:center;align-items:center;gap:22px;flex-wrap:wrap;padding:48px}
+.stage.dk{background:#0B0922}
 .doc{width:260px;aspect-ratio:210/297;border-radius:6px;position:relative;overflow:hidden;box-shadow:0 40px 60px -30px rgba(11,9,34,.55),0 2px 6px rgba(11,9,34,.15);display:flex;flex-direction:column;justify-content:space-between;padding:22px;isolation:isolate}
 .doc>.pat{position:absolute;inset:0;z-index:-1}
 .doc .yr{font-size:22px;font-weight:500;letter-spacing:-.04em;line-height:1.1}
@@ -136,7 +136,7 @@ p{line-height:1.55}
 .cap2{font-family:var(--m);font-size:12.5px;letter-spacing:-.005em;color:var(--slate);text-align:center;margin-top:12px}
 .stage.dk .cap2{color:var(--slate3)}
 .fig{display:flex;flex-direction:column;align-items:center}
-footer{margin:60px 4px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#3A4A64}
+footer{margin:60px 4px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#2A2470}
 
 /* ===== Vector v2: orbit, signal arc, five states ===== */
 .vx{overflow:visible}
@@ -202,7 +202,7 @@ footer{margin:60px 4px 20px;display:flex;justify-content:space-between;gap:12px;
   <div class="t n sp" style="--s:3"><div class="sw"><div><h3>Ink Violet</h3><p class="spec">HEX #120F33<br>RGB 18 15 51<br>CMYK 65 71 0 80</p></div></div><div class="ramp" data-ramp="#0B0922,#120F33,#1E1A5C,#2A2470,#3B34A0,#4C44B8"></div></div>
   <div class="t s sp" style="--s:3"><div class="sw"><div><h3>Vector Violet</h3><p class="spec" style="color:#fff">HEX #6E4BFF<br>RGB 110 75 255<br>CMYK 57 71 0 0</p></div></div><div class="ramp" data-ramp="#5B3DF5,#6E4BFF,#9C84FF,#C4B5FF,#EEE9FF"></div></div>
   <div class="t w sp" style="--s:3"><div class="sw"><div><h3>Lilac &amp; Paper</h3><p class="spec">LILAC #C4B5FF<br>PAPER #F4F2FA<br>MIST #E2DFEE<br>SLATE #5B5A7A</p></div></div><div class="ramp" data-ramp="#FFFFFF,#F4F2FA,#E2DFEE,#C4B5FF,#5B5A7A"></div></div>
-  <div class="t sp" style="--s:3;background:var(--copper);color:#fff"><div class="sw"><div><h3>Signal Copper</h3><p class="spec" style="color:#FBE6D6">HEX #FF7A3D<br>RGB 255 122 61<br>CMYK 0 52 76 0</p></div></div><p style="margin-top:22px;font-size:14px;color:#FFF3EA">Interaction accent. Only the avatar, the assistant panel and AI disclosure use it.</p></div>
+  <div class="t sp" style="--s:3;background:var(--copper);color:#fff"><div class="sw"><div><h3>Signal Copper</h3><p class="spec" style="color:#FBE6D6">HEX #FF7A3D<br>RGB 255 122 61<br>CMYK 0 52 76 0</p></div></div><p style="margin-top:22px;font-size:14px;color:#FFF3EA">The intelligence layer. Copper marks what the AI or live data touches: Vector, the assistant, citations, live indicators and configurator results. Fills carry ink text; copper text sits on ink only.</p></div>
   <div class="t w sp" style="--s:7"><span class="k">Proportion</span><div class="prop"><div style="flex:44;background:var(--navy);color:#fff">INK VIOLET 44%</div><div style="flex:28;background:#fff;border:1px solid var(--mist);color:var(--slate)">WHITE 28%</div><div style="flex:14;background:var(--cloud);color:var(--slate)">PAPER</div><div style="flex:9;background:#6E4BFF;color:#fff">VIOLET</div><div style="flex:5;background:#C4B5FF;color:var(--midnight)">LILAC</div></div></div>
   <div class="t w sp" style="--s:5"><span class="k">Contrast against WCAG 2.2</span><table class="ctr-tbl"><tr><td><i style="background:#120F33"></i> Ink Violet on <i style="background:#FFFFFF"></i> White</td><td>18.4 : 1 AAA</td></tr><tr><td><i style="background:#FFFFFF"></i> White on <i style="background:#6E4BFF"></i> Violet</td><td>5.1 : 1 AA</td></tr><tr><td><i style="background:#120F33"></i> Ink Violet on <i style="background:#C4B5FF"></i> Lilac (buttons)</td><td>10.0 : 1 AAA</td></tr><tr><td><i style="background:#C4B5FF"></i> Lilac on <i style="background:#120F33"></i> Ink Violet</td><td>10.0 : 1 AAA</td></tr><tr><td><i style="background:#5B3DF5"></i> Deep Violet on <i style="background:#F4F2FA"></i> Paper (links)</td><td>5.5 : 1 AA</td></tr><tr><td><i style="background:#FF7A3D"></i> Copper on <i style="background:#120F33"></i> Ink Violet</td><td>7.1 : 1 AAA</td></tr><tr><td><i style="background:#120F33"></i> Ink Violet on <i style="background:#FF7A3D"></i> Copper</td><td>7.1 : 1 AAA</td></tr></table></div>
 </div>
@@ -235,15 +235,15 @@ footer{margin:60px 4px 20px;display:flex;justify-content:space-between;gap:12px;
 </div>
 
 <!-- AVATAR -->
-<div class="sec"><h2>06 Vector, the Guide</h2><p>An original avatar built from two chevrons: the violet outline is XTGlobal's knowledge, the copper chevron is the answer moving toward you. It never has a face and never pretends to be a person.</p></div>
+<div class="sec"><h2>06 Vector, the Guide</h2><p>An original avatar built from two chevrons: the violet outline is XTGlobal's knowledge, the copper chevron is the answer moving toward you, and the copper signal arc shows what Vector is doing right now. It never has a face and never pretends to be a person.</p></div>
 <div class="g">
   <div class="t m sp" style="--s:12"><div class="pat" data-pat="halftone" data-o='{"w":1300,"h":420,"step":22,"cx":0.9,"cy":0.3,"size":420,"c":"#1E1A5C"}'></div><span class="k">States, delivered as SVG and Lottie</span>
     <div class="states">
-      <div><span data-av="idle"></span><span><b>Idle</b><small>Front chevron drifts forward, 3.2s loop</small></span></div>
-      <div><span data-av="listening"></span><span><b>Listening</b><small>Back chevron pulses while you type</small></span></div>
-      <div><span data-av="thinking"></span><span><b>Thinking</b><small>Both chevrons travel, 0.9s loop</small></span></div>
-      <div><span data-av="speaking"></span><span><b>Speaking</b><small>Copper core pulses as text streams</small></span></div>
-      <div><span data-av="handoff"></span><span><b>Handoff</b><small>Turns lilac when passing to a person</small></span></div>
+      <div><span data-av="idle"></span><span><b>Idle</b><small>Signal arc orbits slowly; front chevron drifts forward</small></span></div>
+      <div><span data-av="listening"></span><span><b>Listening</b><small>Arc widens and pulses while you type</small></span></div>
+      <div><span data-av="thinking"></span><span><b>Thinking</b><small>Arc spins fast; both chevrons travel</small></span></div>
+      <div><span data-av="speaking"></span><span><b>Speaking</b><small>Full copper ring pulses as text streams</small></span></div>
+      <div><span data-av="handoff"></span><span><b>Handoff</b><small>Ring and chevron turn lilac when passing to a person</small></span></div>
     </div></div>
 </div>
 
