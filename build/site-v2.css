@@ -136,8 +136,6 @@ h3{letter-spacing:-.025em}
 .pm span.on{background:#fff;color:var(--ink)}
 .clk div{border-top-color:rgba(255,255,255,.1)}
 .clk i{color:var(--sky3)}
-.live::before{background:var(--sky3)}
-.askbar2 i{background:var(--sky);color:var(--void)}
 
 @media(max-width:760px){
   .shell.day{margin:8px 8px 0;border-radius:26px 26px 0 0}
@@ -253,9 +251,7 @@ input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 6px rgba(110,75,255,.25
 .foot .fbrand .brandpill img{height:44px!important;width:auto}
 
 /* assistant + dock pick up the new accent */
-.askbar button,.af button,.dock button.go,.askbar2 i,.cite i{background:var(--sky);color:var(--void)}
-.askbar:focus-within,.af form:focus-within{border-color:var(--sky)}
-.msg.a{border-left-color:var(--sky)}
+/* assistant controls: see COPPER block below */
 .dock{background:var(--navy)}
 
 /* the client wall now lives under the hero; results stay about results */
@@ -287,3 +283,84 @@ input[type=range]::-webkit-slider-thumb{box-shadow:0 0 0 6px rgba(110,75,255,.25
 .post:hover h3,.ri b:hover{color:var(--sky7)}
 .rc.sky .go .ad{background:#fff;color:var(--indigo)}
 .lane .bar{background:var(--cloud)}
+
+/* =========================================================
+   COPPER: the intelligence layer
+   Copper marks anything the AI or live data touches: Vector,
+   the assistant, citations, live indicators, configurator
+   output. Fills carry ink text (7.6:1); copper text sits on
+   ink only (7.1:1). Never decoration, never on static content.
+   ========================================================= */
+:root{--copper:#FF7A3D;--copper-ink:#B23F08;--copper-soft:#FFE6DA}
+.askbar button,.af button,.dock button.go,.askbar2 i,.cite i{background:var(--copper);color:var(--void)}
+.askbar:focus-within,.af form:focus-within{border-color:var(--copper)}
+.sugg button:hover{border-color:var(--copper);color:#fff}
+.msg.a{border-left-color:var(--copper)}
+.live{color:var(--copper)}
+.live::before,.vstate i,.livedot{background:var(--copper)}
+.clk i{color:#FFB08C}
+.clk i.off{color:var(--slate3)}
+.now{background:var(--copper)}
+.now::after{color:var(--copper-ink)}
+.lane:last-child .bar{background:var(--copper);color:var(--void)}
+.dots i[style*="FF7A3D"]{outline:0}
+.otop .ok,#podname{background:var(--copper-soft)!important;color:var(--copper-ink)!important}
+
+/* nav: the guide button carries a live dot */
+.vnav{position:relative}
+.livedot{position:absolute;top:7px;right:7px;width:9px;height:9px;border-radius:50%;box-shadow:0 0 0 2px #fff}
+.livedot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid var(--copper);animation:ping 2.4s var(--ease-out) infinite}
+@keyframes ping{0%{transform:scale(.6);opacity:1}80%,100%{transform:scale(1.5);opacity:0}}
+
+/* hero: conversational search in place of a magnifying glass */
+.vbar{display:flex;align-items:center;gap:14px;width:min(600px,100%);margin-top:22px;padding:8px 8px 8px 10px;border-radius:999px;background:#fff;color:var(--ink);text-align:left;box-shadow:0 18px 40px -22px rgba(11,9,34,.55),inset 0 0 0 1px rgba(15,13,38,.06);transition:transform 260ms var(--ease-out),box-shadow 260ms var(--ease-out)}
+.vbar:hover{transform:translateY(-2px);box-shadow:0 24px 48px -22px rgba(11,9,34,.6),inset 0 0 0 1px rgba(255,122,61,.5)}
+.vbar-av{flex:none;width:46px;height:46px;border-radius:50%;background:var(--navy);display:grid;place-items:center;color:#fff}
+.vbar-av .vx{width:40px;height:40px}
+.vbar-t{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.vbar-t small{font-size:12px;font-weight:600;color:var(--ink);letter-spacing:-.005em}
+.vbar-t small em{font-style:normal;font-weight:400;color:var(--slate)}
+.vbar-q{font-size:15.5px;color:#3A3858;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center}
+.caret{display:inline-block;width:2px;height:1.05em;background:var(--copper);margin-left:2px;animation:blink 1s steps(1) infinite}
+.vbar-go{flex:none;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:999px;background:var(--copper);color:var(--void);font-weight:500;font-size:14.5px}
+.vbar-go .ar{width:14px;height:14px}
+@media(max-width:560px){.vbar-t small em{display:none}.vbar-go{padding:0 14px}.vbar-q{font-size:14px}}
+
+/* guide card: Vector's stage */
+.g-ask{display:flex;flex-direction:column}
+.vstage{display:flex;align-items:center;gap:22px;margin-bottom:26px}
+.vav{position:relative;flex:none;width:132px;height:132px;display:grid;place-items:center;color:#fff}
+.vav::before,.vav::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.vav::before{inset:0;border:1px solid rgba(196,181,255,.22)}
+.vav::after{inset:-16px;border:1px dashed rgba(196,181,255,.16);animation:vxorbit 40s linear infinite}
+.vav .vx{width:104px;height:104px}
+.vmeta{display:flex;flex-direction:column;gap:8px;min-width:0}
+.vmeta b{font-size:28px;font-weight:500;letter-spacing:-.035em;line-height:1}
+.vstate{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:13px;color:#FFB08C;background:rgba(255,122,61,.12);border-radius:999px;padding:5px 12px 5px 10px}
+.vstate i{width:7px;height:7px;border-radius:50%}
+.vstate[data-s="thinking"] i{animation:pulse .6s ease-in-out infinite}
+.vstate[data-s="speaking"] i{animation:pulse .3s ease-in-out infinite}
+.vmeta small{font-size:13.5px;line-height:1.45;color:#B2ADD1;max-width:38ch}
+.g-ask .tag{display:none}
+.vpreview{margin-top:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:16px 18px;min-height:178px}
+.vp-q{display:flex;flex-direction:column;gap:4px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}
+.vp-q span{font-size:12px;color:var(--slate3)}
+.vp-q b{font-weight:500;font-size:15px;color:#fff;min-height:1.3em}
+.vp-a{padding-top:12px}
+.vp-tag{display:block;font-size:12px;color:#FFB08C;margin-bottom:6px}
+.vp-a p{font-size:14.5px;line-height:1.5;color:#E6E2F4;min-height:1.5em}
+.vp-skel{display:grid;gap:8px;width:80%}.vp-skel i{height:9px;border-radius:6px;background:rgba(255,255,255,.12);animation:pulse 1s ease-in-out infinite}
+.vp-skel i:nth-child(2){width:84%}.vp-skel i:nth-child(3){width:58%}
+.vp-skel[hidden]{display:none}
+.vpreview .cites{margin-top:10px}
+@media(max-width:560px){.vstage{gap:14px}.vav{width:96px;height:96px}.vav .vx{width:76px;height:76px}.vmeta b{font-size:22px}}
+
+/* dock: the guide follows the reader */
+.dock{border:1px solid rgba(255,122,61,.35)}
+.dock .vx{width:44px;height:44px}
+.rc.ask .vx{width:64px;height:64px}
+.asst .ah .vx{width:46px;height:46px}
+
+/* hero copy column spans the hero so the Vector bar can size to it */
+.hero-inner{width:100%;display:flex;flex-direction:column;align-items:center}
+.vbar{width:100%;max-width:600px}

@@ -137,6 +137,27 @@ p{line-height:1.55}
 .stage.dk .cap2{color:var(--slate3)}
 .fig{display:flex;flex-direction:column;align-items:center}
 footer{margin:60px 4px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#3A4A64}
+
+/* ===== Vector v2: orbit, signal arc, five states ===== */
+.vx{overflow:visible}
+.vx .vx-arc,.vx .vx-dot{transform-box:view-box;transform-origin:32px 32px}
+.vx .vx-front,.vx .vx-back{transform-box:fill-box;transform-origin:center;transition:transform 280ms var(--e)}
+.vx .vx-front path{transition:fill 320ms var(--e)}
+.vx[data-state="idle"] .vx-arc,.vx[data-state="idle"] .vx-dot{animation:vxorbit 9s linear infinite}
+.vx[data-state="idle"] .vx-front{animation:nudge 3.2s ease-in-out infinite}
+.vx[data-state="listening"] .vx-arc{animation:vxlisten 1.1s ease-in-out infinite}
+.vx[data-state="listening"] .vx-back{animation:blink 1s ease-in-out infinite}
+.vx[data-state="thinking"] .vx-arc,.vx[data-state="thinking"] .vx-dot{animation:vxorbit 1.05s cubic-bezier(.6,.1,.4,.9) infinite}
+.vx[data-state="thinking"] .vx-front,.vx[data-state="thinking"] .vx-back{animation:travel .9s var(--e) infinite}
+.vx[data-state="thinking"] .vx-back{animation-delay:.15s}
+.vx[data-state="speaking"] .vx-front{animation:speak .45s ease-in-out infinite}
+.vx[data-state="speaking"] .vx-arc{stroke-dasharray:100 0;animation:vxspeak .45s ease-in-out infinite}
+.vx[data-state="handoff"] .vx-front path,.vx[data-state="handoff"] .vx-dot{fill:#C4B5FF}
+.vx[data-state="handoff"] .vx-arc{stroke:#C4B5FF;stroke-dasharray:100 0}
+@keyframes vxorbit{to{transform:rotate(360deg)}}
+@keyframes vxlisten{50%{stroke-dasharray:46 54;opacity:.7}}
+@keyframes vxspeak{50%{opacity:.45}}
+@media(prefers-reduced-motion:reduce){.vx *{animation:none!important}}
 </style>
 </head>
 <body>
@@ -411,8 +432,15 @@ const XT = (() => {
 
   /* "Vector": the brand guide avatar. Two chevrons from the brand motif inside a ring. */
   function avatar(state = 'idle', size = 44) {
-    const back = chev(18, 22, 20, 'none').replace('<path ', `<path stroke="${C.sky}" stroke-width="1.6" vector-effect="non-scaling-stroke" `);
-    return `<svg class="vx" data-state="${state}" viewBox="0 0 44 44" width="${size}" height="${size}" aria-hidden="true"><circle class="vx-ring" cx="22" cy="22" r="20.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".35"/><g class="vx-back">${back}</g><g class="vx-front">${chev(25, 22, 20, C.copper)}</g></svg>`;
+    /* "Vector" v2: two brand chevrons inside an orbit. The violet outline is what
+       XTGlobal knows, the copper chevron is the answer moving toward you, and the
+       copper signal arc on the orbit shows what the guide is doing right now. */
+    const back = chev(27, 32, 30, 'none').replace('<path ', `<path stroke="${C.sky}" stroke-width="1.8" vector-effect="non-scaling-stroke" stroke-linejoin="round" `);
+    return `<svg class="vx" data-state="${state}" viewBox="0 0 64 64" width="${size}" height="${size}" aria-hidden="true">`
+      + `<circle class="vx-track" cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".18"/>`
+      + `<circle class="vx-arc" cx="32" cy="32" r="29" fill="none" stroke="${C.copper}" stroke-width="2.4" stroke-linecap="round" pathLength="100" stroke-dasharray="20 80"/>`
+      + `<circle class="vx-dot" cx="32" cy="3" r="2.2" fill="${C.copper}"/>`
+      + `<g class="vx-back">${back}</g><g class="vx-front">${chev(37, 32, 30, C.copper)}</g></svg>`;
   }
 
   return { C, CHEV, chev, wrap, burst, field, bars, ramp, halftone, supergraphic, slip, arcs, avatar };
